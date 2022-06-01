@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="Group_24968" data-name="Group 24968" transform="translate(-191 -1436)">
+    <g id="noun-access-2067178" transform="translate(77.344 1392.332)">
+      <path id="Path_348865" data-name="Path 348865" d="M133.074,196.591H138.2v2.5a2.5,2.5,0,1,0,5,0v-2.5h2.5v5h0a2.5,2.5,0,1,0,5,0v-7.5a2.5,2.5,0,0,0-2.5-2.5H132.323a8.755,8.755,0,1,0,.751,5Zm-12.374-1.25a3.755,3.755,0,1,1,1.1,2.651A3.748,3.748,0,0,1,120.7,195.341Z" transform="translate(0 -124.923)" fill="#dc773d" stroke="#f5fbea" stroke-width="2.5"/>
+      <path id="Path_348866" data-name="Path 348866" d="M193.743,46.668a24.751,24.751,0,0,0-15.309,5.261,2.5,2.5,0,1,0,3.067,3.95,19.792,19.792,0,0,1,12.242-4.211A20,20,0,1,1,185.8,90.03a19.794,19.794,0,0,1-6.618-4.681,2.5,2.5,0,0,0-3.643,3.425,24.989,24.989,0,1,0,18.2-42.106Z" transform="translate(-52.873 0)" fill="#dc773d" stroke="#f5fbea" stroke-width="2.5"/>
+    </g>
+    <g id="Rectangle_6521" data-name="Rectangle 6521" transform="translate(191 1436)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="55" height="55" stroke="none"/>
+      <rect x="0.5" y="0.5" width="54" height="54" fill="none"/>
+    </g>
+  </g>
+</svg>

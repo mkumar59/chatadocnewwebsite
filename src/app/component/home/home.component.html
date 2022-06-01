@@ -1,0 +1,278 @@
+<section class="sec-1">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-7 home-banner">
+           <!-- <h2 class="bannerhead2">Welcome</h2> -->
+           <h1 class="title-head">Right Doctor . Right Time<br> Right Cost . Any Place</h1>
+           <!-- <h1 class="title-head"> सही डॉक्टर  सही समय सही फीस  कहीं भी </h1> -->
+           <p class="banner-text">See our Mental Health Experts from anywhere, anytime</p>
+           <!-- <p *ngIf="datamessage=='हिंदी'" class="banner-text">अपने स्मार्टफ़ोन, टेबलेट, या कंप्यूटर का उपयोग करके मिनटों में डॉक्टर से ऑनलाइन मिलिए। <br></p> -->
+           <button class="downloadbtn"><img src="assets/img/home/goolgeplayeng.png"></button>
+           <button class="downloadbtn"><img src="assets/img/home/appstoreeng.png"></button>
+           <!-- <button *ngIf="datamessage=='हिंदी'" data-toggle="modal" data-target="#myModal2" class="btn btn1" style="background-image: url('assets/img/new-patient/common-btn.png');">आज ही हमसे जुड़ें </button> -->
+        </div>
+     </div>
+  </div>
+</section>
+<!-- section two -->
+<section class="sec-2 section commonsectionmt">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-12">
+           <h2 class="commontitle">See a doctor anywhere, anytime</h2>
+           <!-- <h2  *ngIf="datamessage=='हिंदी'" class="title title1width commontitle">अब डॉक्टर से मिलिए - कहीं भी, कभी भी </h2> -->
+        </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col-md-6">
+           <p>
+              A simple, secure, and convenient way to receive healthcare you need, now. Chat-A- Doc offers live video chats with board-certified physicians without you ever leaving the comfort of your own home. Chat-A-Doc eliminates many of the obstacles that keep people from accessing healthcare such as: cost, taking time off work, transportation issues, and exposure to more germs.
+           </p>
+           <!-- <p  *ngIf="datamessage=='हिंदी'"> -->
+           <!-- आपके लिए अब आवश्यक स्वास्थ्य सेवाएँ प्राप्त करने का एक सरल, सुरक्षित और सुविधाजनक तरीका । अपना आरामदायक घर छोड़े बिना बोर्ड-प्रमाणित चिकित्सकों के साथ लाइव वीडियो चैट की सुविधा चैट-ए- डॉक आपको प्रदान करता है, । चैट-ए-डॉक उन कई बाधाओं को समाप्त करता है जो लोगों को स्वास्थ्य सेवा तक पहुंचने से रोकती हैं जैसे: खर्च,  कार्य से समय निकालना, परिवहन से जुड़े मुद्दे और अधिक कीटाणुओं के संपर्क में आना।  -->
+           <!-- </p>   -->
+        </div>
+        <div class="col-md-6">
+           <video class="section-2-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" controls>
+              <source src="assets/img/home/home-video.mp4" type="video/mp4">
+           </video>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- section three -->
+<section class="home-sec-3 section commonsectionmt">
+  <div class="container">
+     <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+           <h2 class="commontitle">Benefits Of Telemedicine</h2>
+           <p>Tele Consultation became a need of the hour, particularly during pandemic situation. This revolutionized the field of Tele - Medicine and Tele -Counselling making it more client centric. Although such practice did exit earlier but people realized its ease and significance lately. Advancement of technology added ever more and precipitated with growth and accessibility.</p>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-12">
+           <swiper [config]="config">
+              <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b1.svg" alt="img 1">
+                    <p>Easy to access & use</p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b2.svg" alt="img 1"> 
+                    <p>Saves time & energy</p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b3.svg" alt="img 1">
+                    <p>Aids to comfort & convenience</p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b4.svg" alt="img 1">
+                    <p>Safety from infectious disease</p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b5.svg" alt="img 1">
+                    <p>Support for chronic conditions</p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b6.svg" alt="img 1">
+                    <p>Cost benefits & Ease of availability</p>
+                 </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+           </swiper>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- section four -->
+<section class="home-sec-4 commonsectionmt">
+  <div class="container">
+     <div class="row mb-5">
+        <div class="col-md-12">
+           <h2 class="commontitle">Medical Conditions Treated</h2>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-6">
+          <div class="medicaltabcontainer">
+           <div class="medicaltab1">
+              <input type="radio" id="Physician" (click)="Family1()" name="Physician1" value="Physician" checked>
+              <label for="Physician" class="chelboxlabel"> Family Physician</label><br>
+              <div class="Ckekbox" *ngIf="!Family">
+                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing interest in doing things?</p>
+              </div>
+           </div>
+           
+           <div class="medicaltab1">
+              <input type="radio" (click)="Psychologist1()" id="Psychologist" name="Physician1" value="Psychologist">
+              <label for="Psychologist"  class="chelboxlabel"> Psychologist</label><br>
+              <div class="Ckekbox" *ngIf="!Psychologist">
+                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing interest in doing things?</p>
+              </div>
+           </div>
+           <div class="medicaltab1">
+              <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+              <label for="Psychiatrist" class="chelboxlabel"> Psychiatrist</label><br>
+              <div class="Ckekbox" *ngIf="!Psychiatrist">
+                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing interest in doing things?</p>
+              </div>
+           </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+           <swiper [config]="config2" >
+              <div class="swiper-wrapper swiper-wrappe11" >
+                 <div class="swiper-slide sec-bg1">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group1.png"  alt="Fever" /></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg2">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group2.png" alt="Headache"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg3">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group3.png" alt="Headache"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg4">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group4.png" alt="Upper Respiratory Infection"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg5">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group5.png" alt="Vomiting"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg6">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group6.png" alt="Diarrhea"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg7">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group7.png" alt="Constipation"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg8">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group8.png" alt="Gastrointestinal Issues"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg9">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group9.png" alt="Seasonal Allergies"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg10">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group10.png" alt="Urinary Tract Infection"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg11">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/Group11.png" alt="Arthritis"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg12">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/12.png" alt="Cough"/></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="swiper-slide sec-bg13">
+                    <div class="row">
+                       <div class="">
+                          <div class=""><img src="assets/img/treatment/13.png" alt="Diabetes Management"/></div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </swiper>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- Section five -->
+<section class="home-sec-5 commonsectionmt">
+  <div class="container">
+     <div class="row">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+           <h3>197+M</h3>
+           <p>People had mental disorders in India till 2019</p>
+        </div>
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+           <h3>56M</h3>
+           <p>Indians suffer from depression and another 38 million Indians suffer from anxiety disorders.</p>
+        </div>
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+           <h3>28.3L</h3>
+           <p>Tele counselling sessions happened only during pandemic situation, the count is on</p>
+        </div>
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+           <h3>28.3L</h3>
+           <p>Tele counselling sessions happened only during pandemic situation, the count is on</p>
+        </div>
+     </div>
+     <div class="row mt-4">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 offset-md-2">
+           <h3>11-35</h3>
+           <p>People aged 11-35 prefer online counselling sessions over various online portals</p>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+           <h3>7%</h3>
+           <p>Increase in preference from face to face counselling to tele-counselling</p>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- Section six -->
+<section class="section home-sec-6 commonsectionmt">
+  <div class="container">
+     <div class="row">
+        <h2 class="commontitle">Download Now</h2>
+        <!-- <h2 class="title title5width commontitle mb-3" *ngIf="datamessage=='हिंदी'">अभी डाऊनलोड करें </h2> -->
+        <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+           <div class="googleplaydiv">
+              <button class="downloadbtn"><img src="assets/img/home/goolgeplayeng.png"></button>
+           </div>
+           <div class="googleappstorediv">          
+              <button class="downloadbtn"><img src="assets/img/home/appstoreeng.png"></button>
+           </div>
+        </div>
+        <div class="col-6 col-ms-6  col-md-6  col-lg-6 offset-md-1">
+           <img class="downloadimg" src="assets/img/home/sec-5-downloadimglarge.png" alt="download images">
+        </div>
+     </div>
+  </div>
+</section>
