@@ -19,15 +19,14 @@
   <div class="container">
      <div class="row">
         <div class="col-md-12">
-           <h2 class="commontitle">See a doctor anywhere, anytime</h2>
+           <h2 class="commontitle">See Our Mental Health Experts From Anywhere, Anytime</h2>
            <!-- <h2  *ngIf="datamessage=='हिंदी'" class="title title1width commontitle">अब डॉक्टर से मिलिए - कहीं भी, कभी भी </h2> -->
         </div>
      </div>
      <div class="row mt-3">
         <div class="col-md-6">
            <p>
-              A simple, secure, and convenient way to receive healthcare you need, now. Chat-A- Doc offers live video chats with board-certified physicians without you ever leaving the comfort of your own home. Chat-A-Doc eliminates many of the obstacles that keep people from accessing healthcare such as: cost, taking time off work, transportation issues, and exposure to more germs.
-           </p>
+            Chat - A- Doc is a simple, safe and secured space for sharing your mental health related issues. Get in touch with our board of Licensed experts and take a step towards maintaining your mental well- being. Access this online platform from the ease and comfort of your space - be it home or workspace, and get immediate mental health support.           </p>
            <!-- <p  *ngIf="datamessage=='हिंदी'"> -->
            <!-- आपके लिए अब आवश्यक स्वास्थ्य सेवाएँ प्राप्त करने का एक सरल, सुरक्षित और सुविधाजनक तरीका । अपना आरामदायक घर छोड़े बिना बोर्ड-प्रमाणित चिकित्सकों के साथ लाइव वीडियो चैट की सुविधा चैट-ए- डॉक आपको प्रदान करता है, । चैट-ए-डॉक उन कई बाधाओं को समाप्त करता है जो लोगों को स्वास्थ्य सेवा तक पहुंचने से रोकती हैं जैसे: खर्च,  कार्य से समय निकालना, परिवहन से जुड़े मुद्दे और अधिक कीटाणुओं के संपर्क में आना।  -->
            <!-- </p>   -->
@@ -101,26 +100,117 @@
           <div class="medicaltabcontainer">
            <div class="medicaltab1">
               <input type="radio" id="Physician" (click)="Family1()" name="Physician1" value="Physician" checked>
-              <label for="Physician" class="chelboxlabel"> Family Physician</label><br>
+              <label for="Physician" class="chelboxlabel"> Depression </label><br>
               <div class="Ckekbox" *ngIf="!Family">
-                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing interest in doing things?</p>
+                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing intrerest in doing things?</p>
               </div>
            </div>
            
            <div class="medicaltab1">
               <input type="radio" (click)="Psychologist1()" id="Psychologist" name="Physician1" value="Psychologist">
-              <label for="Psychologist"  class="chelboxlabel"> Psychologist</label><br>
+              <label for="Psychologist"  class="chelboxlabel"> Anxiety</label><br>
               <div class="Ckekbox" *ngIf="!Psychologist">
-                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing interest in doing things?</p>
+                 <p>Do you overthink a lot, or worry that bad things might happen to you or someone close to you, always negative thoughts about future?</p>
               </div>
            </div>
            <div class="medicaltab1">
               <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-              <label for="Psychiatrist" class="chelboxlabel"> Psychiatrist</label><br>
+              <label for="Psychiatrist" class="chelboxlabel"> Fear</label><br>
               <div class="Ckekbox" *ngIf="!Psychiatrist">
-                 <p>Are you Feeling upset or experiencing spells of low mood, invariably for most part of the day, feeling exhausted, losing interest in doing things?</p>
+                 <p>Do constantly fear about things which are otherwise not a potential treat?</p>
               </div>
            </div>
+           <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Sleep Issues</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Are you struggling to fall asleep, or waking up in the middle of the night and not able to sleep again or not able to sleep at all?</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Couple Counselling</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Are you fighting with your partner more than usual? Are you finding it difficult to come in common terms with your partner?</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Career counselling</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Are you struggling with yourself or your parents about which career pathway to choose?</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Adolescents' Mental Health</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Turbulent teens? Adolescents think "My parents do not understand me" Parents think " my child is growing up and doen't lsiten to me anymore"</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Women and Men Mental health </label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Do you feel the burnout of your day- to day schedule? Irrespective of gender, men and women often expeience stress and burnout out of their routine work and monotonos schedule.</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Parental Counselling</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Do you get overwhelmed at times raising your child? Parental meantal health and well being often require a lot of attention</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Grief Support </label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Losing a loved one is difficult and griefing takes time . Seeking support from a mental health expert is essentilal.</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Psychological First Aid</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Immediate humane intervention after a Trauma! Trauma is delibiltating condition and mental health assistance is essential if you have been through a trauma</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Domestic Violence</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Have you been a victim of domestic violence of any sort- emotional and physical? We are here to help you</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Bullying</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Making fun of others, name calling at schools, college, or even work place takes a toll on mental health</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Low in confidence</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Negative sense of self, enviornmental situation often lowers our confidence, which is likely to impact our efficiency and the way we see ourselves</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Work Place stress</label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Are you struggling with occupational stress, or difficult to maintain a work-life balance, or decision to choose an adequate job?</p>
+            </div>
+         </div>
+         <div class="medicaltab1">
+            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
+            <label for="Psychiatrist" class="chelboxlabel"> Difficulty in coping </label><br>
+            <div class="Ckekbox" *ngIf="!Psychiatrist">
+               <p>Are you struggling to cope with a difficult situation or person or resort to smoking, alcohol abuse or watching inappropriate sexual content when stressed out?</p>
+            </div>
+         </div>
           </div>
         </div>
         <div class="col-md-6">
@@ -240,8 +330,8 @@
            <p>Tele counselling sessions happened only during pandemic situation, the count is on</p>
         </div>
         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-           <h3>28.3L</h3>
-           <p>Tele counselling sessions happened only during pandemic situation, the count is on</p>
+           <h3>55%</h3>
+           <p>Of Indian employees feel stressed, majorly looks for tele-counselling</p>
         </div>
      </div>
      <div class="row mt-4">
