@@ -6,7 +6,7 @@ import {FormGroup,FormBuilder,Validators,  } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { timeout } from 'rxjs/operators';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
-
+@HostListener('window:scroll', ['$event'])
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -22,22 +22,34 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    window.onscroll = function() {myFunction()};
-    var header = document.getElementById("myHeader")!;
-    var sticky = header?.offsetTop;
-    //console.log(sticky)
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header?.classList.add("sticky");
-       // console.log(sticky)
-      } else {
-        header?.classList.remove("sticky");
-      }
-    }
+  
+    window.onscroll = ()=> {this.myFunction()};
+
+  
+
 
     
 }
+myFunction() {
 
+  // var header = document.getElementById('myHeader')!;
+  let element = document.querySelector('.bbb') as HTMLElement;
+
+  if (window.pageYOffset > element.clientHeight) {
+    element.classList.add('sticky');
+  } else {
+    element.classList.remove('sticky');
+  }
+
+  // alert("scroll")
+  // var sticky=10
+  // if (window.pageYOffset > sticky) {
+  //   header?.classList.add("sticky");
+  //   console.log(sticky)
+  // } else {
+  //   header?.classList.remove("sticky");
+  // }
+}
   
   openNav() {
     var mynav=document.getElementById("mySidenav")!;

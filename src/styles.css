@@ -28,6 +28,7 @@
     src: url(./assets/fonts/OpenSans-Regular.ttf);
   }
   /* Slider css */
+  .navbar {padding-bottom: 0px!important;}
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: end!important;
@@ -94,7 +95,7 @@ display: none;
     }
     
     .nav-link:hover{
-      color:#E51E25!important;
+      color:#773DDC!important;
     }
     .blackfont{
         color:#000!important;
@@ -113,9 +114,9 @@ display: none;
         border-radius: 4px;
     }
     .active{
-      color:#E51E25!important;
-      border-bottom:1px solid #E51E25;
-      height: 62px;
+      color:#773DDC!important;
+      border-bottom:1px solid #773DDC;
+      /* height: 62px; */
     }
     .site-navbar {
       background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -123,7 +124,7 @@ display: none;
       opacity: 0.9;
       }
       .sticky{
-        opacity:1; 
+        opacity:1!important; 
       }
       .navbar-expand-lg {
         -webkit-box-orient: horizontal;
@@ -181,7 +182,7 @@ display: none;
       top: 15px;
     }  
     .logoimg1{
-      width: 55%;
+      width: 45%;
       padding: 10px;
     }
     .mobile-menu{
@@ -210,7 +211,7 @@ display: none;
       .sec-1{
         background-image: url(/assets/img/home/home-banner-small.png);
         background-repeat: no-repeat;
-        height: 522px;
+        height: 526px;
     }
     .home-banner{
         padding-top: 197px;
@@ -325,7 +326,7 @@ font-family:OpenSans-Bold;
 /* Service page css */
 .service-sec-1{
     background-image: url('./assets/img/service/service-banner-small.png');
-    margin-top: 80px!important;
+    margin-top:70px!important;
     height: 456px;
     background-size:contain;
     background-repeat: no-repeat;
@@ -725,6 +726,8 @@ text-align: center;
     font-family: 'OpenSans-Bold';
     color: #222222;
     font-size: 20px;
+    margin-left:30px;
+
 }
 .footertop ul{
     list-style: none;

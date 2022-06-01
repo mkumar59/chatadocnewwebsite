@@ -1,4 +1,4 @@
-<header *ngIf="datamessage=='English'" id="myHeader" class="site-navbar custom-header fixed-top" role="banner">
+<header *ngIf="datamessage=='English'" #myHeader id="myHeader" (scroll)="myFunction()"  class="bbb site-navbar custom-header fixed-top" role="banner">
     <div class="container">
       <div class="row align-items-right">
         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
