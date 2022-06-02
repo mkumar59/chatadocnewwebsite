@@ -190,17 +190,26 @@ display: none;
       }
 
       /* Home page css start */
+      .knowmorebtn{
+        margin-top: 20px;
+        background: #773DDC 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+        color: #fff;
+        padding: 10px 20px 10px 20px;
+        border: none;
+      }
 .medicaltabcontainer{
   border-left:2px solid #ddd
 }
 .medicaltab1{
   margin-left:-7px;
+  margin-top: 15px;
 }
 .medicaltab1 label{
   padding-left: 10px;
   color: #222222;
   font-family:OpenSans-Bold;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 .medicaltab1 .Ckekbox{
   padding-left: 20px;
@@ -208,10 +217,12 @@ display: none;
 .medicaltab1 input[name="Physician1"]{
   accent-color:#773DDC
 }
-      .sec-1{
-        background-image: url(/assets/img/home/home-banner-small.png);
+      .home-sec-1{
+        background-image: url('assets/img/home/home-banner-small.png'
+        );
         background-repeat: no-repeat;
         height: 526px;
+        background-size: cover;
     }
     .home-banner{
         padding-top: 197px;
@@ -273,6 +284,7 @@ border-radius: 4px;
     background-image: url('assets/img/home/home-sec-5-bg-small.png');
     background-repeat: no-repeat;
     padding: 70px 70px;
+    background-size: cover;
 
 }
 .home-sec-5 p{
@@ -328,7 +340,7 @@ font-family:OpenSans-Bold;
     background-image: url('./assets/img/service/service-banner-small.png');
     margin-top:70px!important;
     height: 456px;
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
 }
 .service-banner{
@@ -409,7 +421,7 @@ width: 220px;
   color: #fff;
 }
 .service-sec-4 .swiper-slide {
-  padding: 70px 0px 70px 0px;
+  padding: 0px 0px 70px 0px;
 }
 .service-sec-4 .swiper-button-next {
   top:90%!important;
@@ -447,13 +459,16 @@ width: 220px;
 
 .service-sec-5 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
   content: 'prev';
-  font-size: 22px;
+  font-size: 15px;
   color: #fff;
 }
 .service-sec-5 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
   content: 'next';
-  font-size: 22px;
+  font-size:15px;
   color: #fff;
+}
+.service-sec-5 .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom:55px;
 }
 .service-sec-5 .swiper-slide {
   padding: 0px 0px 70px 0px;
@@ -470,23 +485,28 @@ width: 220px;
   width: 35%!important; */
 }
 .service-sec-5 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  left: 47%;
+  left: 45%;
   right: 50%;
   background: #773DDC;
-  width: 60px;
+  width: 46px;
 }
 
 .service-sec-5 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-    left: 53%;
+    left: 51%;
     right: 50%;
     background: #773DDC;
-    width: 60px;
+    width: 46px;
 }
 
 
 
 
 /* Section 6 slider */
+.service-sec-6 .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 44px;
+  left: 28px;
+  width: 100%;
+}
 
 .service-sec-6 .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
   opacity: 0.35;
@@ -500,14 +520,16 @@ width: 220px;
   content: 'prev';
   font-size: 22px;
   color: #fff;
+
 }
 .service-sec-6 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
   content: 'next';
   font-size: 22px;
   color: #fff;
+
 }
 .service-sec-6 .swiper-slide {
-  padding: 0px 0px 70px 0px;
+  padding: 0px 0px 0px 0px;
 }
 .service-sec-6 .swiper-button-next {
   top:96%!important;
@@ -525,6 +547,7 @@ width: 220px;
   right: 50%;
   background: #773DDC;
   width: 60px;
+  display: none;
 }
 
 .service-sec-6 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
@@ -532,6 +555,7 @@ width: 220px;
     right: 50%;
     background: #773DDC;
     width: 60px;
+    display: none;
 }
 
 .service-sec-6 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
@@ -644,7 +668,19 @@ text-align: center;
     font-family: 'OpenSans-Regular';
     font-size: 1.3rem;
   }
+  .reflink{
+    text-align: right;
+  }
+  .reflink a{
+    color:#773DDC;
+  }
+  .reflink a:hover{
+    color:#773DDC;
+  }
 /* How it work section css */
+.howitwork-sec-1 .howitwork-banner{
+  padding-top:150px;
+}
 .howitwork-sec-1{
   padding-top: 30px;
   background: #dc3d700f 0% 0% no-repeat padding-box;
@@ -652,15 +688,15 @@ text-align: center;
 }
 .htw-common{
   text-align: center;
-  padding: 83px 21px 60px 35px;
+  padding: 4rem 1rem 1rem 1rem;
   position: relative;
   float: left;
-  width: 273px;
+  width:25%;
 }
 .htw-common2{
   text-align: center;
-  width: 275px;
-  padding: 80px 0px 60px 55px;
+  width:24%;
+  padding: 4rem 1rem 1rem 1rem;
   position: relative;
   float: left;
 }
@@ -795,10 +831,17 @@ text-align: center;
          width: 50%;
          float:left;
        } 
+       .tab-menu{
+        display: block!important; font-size: 27px!important; position: absolute; right: 32px; top: 27px;
+       }
        .mobile-menu{
          display: block;
        }
       .hide-moible{
         display:none;
       }
+      .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start!important;
+    }
       }  
