@@ -340,7 +340,7 @@ font-family:OpenSans-Bold;
     background-image: url('./assets/img/service/service-banner-small.png');
     margin-top:70px!important;
     height: 456px;
-    background-size:cover;
+    background-size:contain;
     background-repeat: no-repeat;
 }
 .service-banner{

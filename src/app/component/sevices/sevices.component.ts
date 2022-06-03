@@ -22,19 +22,25 @@ export class SevicesComponent implements OnInit {
       id:2,
       t:'false',
       title:'What are some tips for maintaining a positive mental well being?',
-      description:'  Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
+      description:'Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
     },
     {
       id:3,
       t:'false',
       title:'Is tele counselling safe?',
-      description:'   Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
+      description:'Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
     },
     {
       id:4,
       t:'false',
-      title:'II am not able to sleep, work is at mess too, is therapy necessary?',
+      title:'I am not able to sleep, work is at mess too, is therapy necessary?',
       description:' Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately.'
+    },
+    {
+      id:5,
+      t:'false',
+      title:'Does stress have any impact on health?',
+      description:'Answer : Yes certainly! There is a mutual connection between mind and body. Stress leads to secretion of cortisol which negatively impacts various bodily functions - respiration, digestion, metabolism etc.'
     }
   ]
   constructor(public langaugeChange:CommonserviceService) { 
