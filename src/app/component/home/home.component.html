@@ -1,7 +1,7 @@
 <section class="home-sec-1">
   <div class="container">
      <div class="row">
-        <div class="col-md-7 home-banner">
+        <div class="col-12 col-sm-7 col-md-7 col-lg-7 home-banner">
            <!-- <h2 class="bannerhead2">Welcome</h2> -->
            <h1 class="title-head">Right Doctor . Right Time<br> Right Cost . Any Place</h1>
            <!-- <h1 class="title-head"> सही डॉक्टर  सही समय सही फीस  कहीं भी </h1> -->
@@ -10,6 +10,9 @@
            <button class="downloadbtn"><img src="assets/img/home/goolgeplayeng.png"></button>
            <button class="downloadbtn"><img src="assets/img/home/appstoreeng.png"></button>
            <!-- <button *ngIf="datamessage=='हिंदी'" data-toggle="modal" data-target="#myModal2" class="btn btn1" style="background-image: url('assets/img/new-patient/common-btn.png');">आज ही हमसे जुड़ें </button> -->
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 homemobilebannerimgcont">
+           <img src="assets/img/home/home-banner-formobile.png" class="homemobilebannerimg">
         </div>
      </div>
   </div>
@@ -105,120 +108,14 @@
                  <p>{{item.description}}</p>
               </div>
            </div>
-
-           
-           <!-- <div class="medicaltab1">
-              <input type="radio" (click)="Psychologist1()" id="Psychologist" name="Physician1" value="Psychologist">
-              <label for="Psychologist"  class="chelboxlabel"> Anxiety</label><br>
-              <div class="Ckekbox" *ngIf="!Psychologist">
-                 <p>Do you overthink a lot, or worry that bad things might happen to you or someone close to you, always negative thoughts about future?</p>
-              </div>
-           </div> -->
-           <!-- <div class="medicaltab1">
-              <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-              <label for="Psychiatrist" class="chelboxlabel"> Fear</label><br>
-              <div class="Ckekbox" *ngIf="!Psychiatrist">
-                 <p>Do constantly fear about things which are otherwise not a potential treat?</p>
-              </div>
-           </div> -->
-           <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Sleep Issues</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Are you struggling to fall asleep, or waking up in the middle of the night and not able to sleep again or not able to sleep at all?</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Couple Counselling</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Are you fighting with your partner more than usual? Are you finding it difficult to come in common terms with your partner?</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Career counselling</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Are you struggling with yourself or your parents about which career pathway to choose?</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Adolescents' Mental Health</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Turbulent teens? Adolescents think My parents do not understand me Parents think  my child is growing up and doen't lsiten to me anymore"</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Women and Men Mental health </label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Do you feel the burnout of your day- to day schedule? Irrespective of gender, men and women often expeience stress and burnout out of their routine work and monotonos schedule.</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Parental Counselling</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Do you get overwhelmed at times raising your child? Parental meantal health and well being often require a lot of attention</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Grief Support </label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Losing a loved one is difficult and griefing takes time . Seeking support from a mental health expert is essentilal.</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Psychological First Aid</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Immediate humane intervention after a Trauma! Trauma is delibiltating condition and mental health assistance is essential if you have been through a trauma</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Domestic Violence</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Have you been a victim of domestic violence of any sort- emotional and physical? We are here to help you</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Bullying</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Making fun of others, name calling at schools, college, or even work place takes a toll on mental health</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Low in confidence</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Negative sense of self, enviornmental situation often lowers our confidence, which is likely to impact our efficiency and the way we see ourselves</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Work Place stress</label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Are you struggling with occupational stress, or difficult to maintain a work-life balance, or decision to choose an adequate job?</p>
-            </div>
-         </div> -->
-         <!-- <div class="medicaltab1">
-            <input type="radio" id="Psychiatrist" (click)="Psychiatrist1()" name="Physician1" value="Psychiatrist">
-            <label for="Psychiatrist" class="chelboxlabel"> Difficulty in coping </label><br>
-            <div class="Ckekbox" *ngIf="!Psychiatrist">
-               <p>Are you struggling to cope with a difficult situation or person or resort to smoking, alcohol abuse or watching inappropriate sexual content when stressed out?</p>
-            </div>
-         </div> -->
-
           </div>
-          <div>
+          <div class="mobilemt">
              <button *ngIf="viewMoreBtn" class="knowmorebtn"  (click)="viewMore()">View More</button>
              <button   *ngIf="viewLessBtn" class="knowmorebtn"  (click)="lessMore()">Less More</button>
             </div>
         </div>
+
+        
         <div class="col-md-6">
            <swiper [config]="config2" >
               <div class="swiper-wrapper swiper-wrappe11" >
@@ -319,8 +216,9 @@
      </div>
   </div>
 </section>
+
 <!-- Section five -->
-<section class="home-sec-5 commonsectionmt">
+<section class="home-sec-5 commonsectionmt desktopviewsec-5">
   <div class="container">
      <div class="row">
         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
@@ -352,6 +250,44 @@
      </div>
   </div>
 </section>
+<section class="mobile-viewsec-5 home-sec-5 commonsectionmt">
+      <div class="container">
+         <swiper [config]="config3">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <h3>197+M</h3>
+                  <p>People had mental disorders in India till 2019</p>
+               </div>
+               <div class="swiper-slide">
+                  <h3>56M</h3>
+                  <p>Indians suffer from depression and another 38 million Indians suffer from anxiety disorders.</p>
+               </div>
+               <div class="swiper-slide">
+                  <h3>28.3L</h3>
+                  <p>Tele counselling sessions happened only during pandemic situation, the count is on</p>
+               </div>
+               <div class="swiper-slide">
+                  <h3>55%</h3>
+                  <p>Of Indian employees feel stressed, majorly looks for tele-counselling</p>
+               </div>
+               <div class="swiper-slide">
+                  <h3>11-35</h3>
+                  <p>Aged people prefer online counselling sessions over various online portals</p>
+               </div>
+               <div class="swiper-slide">
+                  <h3>7%</h3>
+                  <p>Increase in preference from face to face counselling to tele-counselling</p>
+               </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         </swiper>
+      </div>
+</section>
+
 <!-- Section six -->
 <section class="section home-sec-6 commonsectionmt">
   <div class="container">

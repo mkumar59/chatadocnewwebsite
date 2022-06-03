@@ -33,6 +33,13 @@
     flex-wrap: nowrap;
     justify-content: end!important;
 }
+.mobile-viewsec-5{
+  display: none;
+  width: 100%;
+}
+.homemobilebannerimgcont{
+  display: none;;
+}
 .home-sec-3 .swiper-pagination{
 display: none;
 }
@@ -42,6 +49,16 @@ display: none;
 .home-sec-3 .swiper-button-next{
       display: none!important;
   }
+  
+  .home-sec-5 .swiper-pagination{
+    display: none;
+    }
+    .home-sec-5 .swiper-button-prev{
+        display: none!important;
+      }
+    .home-sec-5 .swiper-button-next{
+          display: none!important;
+      }
 /* Header css */
 .headerdownloadbtn{
   background: #773DDC 0% 0% no-repeat padding-box;
@@ -167,27 +184,17 @@ display: none;
         right:10px;
         font-size: 36px;
         margin-left: 50px;
-      }
-    .mobile-menu{
-        font-size: 45px;
-        position: absolute;
-        right:15px;
-        top: 15px;
-    }  
+      } 
     .tab-menu{
-      display: none!important;
-      font-size: 45px;
+      font-size: 26px!important;
       position: absolute;
-      right:15px;
-      top: 15px;
+      right: 15px;
+      top: 23px;
     }  
     .logoimg1{
       width: 45%;
       padding: 10px;
     }
-    .mobile-menu{
-        display:none!important;
-      }
 
       /* Home page css start */
       .knowmorebtn{
@@ -336,6 +343,16 @@ font-family:OpenSans-Bold;
   font-size: 16px;
 }
 /* Service page css */
+.testimonialtitle{
+  font-size: 1rem;
+  color: #3D52DC;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-family:OpenSans-Bold;
+}
+.testimonialtext{
+font-size: .9rem;
+}
 .service-sec-1{
     background-image: url('./assets/img/service/service-banner-small.png');
     margin-top:70px!important;
@@ -678,6 +695,9 @@ text-align: center;
     color:#773DDC;
   }
 /* How it work section css */
+.howitworkbannerimg{
+width: 100%;
+}
 .howitwork-sec-1 .howitwork-banner{
   padding-top:150px;
 }
@@ -706,9 +726,12 @@ text-align: center;
   position: relative;
   float: left;
 } */
+
 .howitwork-bg{
-  height: 400px;
+  background-image: url("assets/img/howitwork/simplestepimg.png");
+  margin-left: 0px;
   background-size: contain;
+  height: 443px;
   background-repeat: no-repeat;
 }
 .howitwork-bg img{
@@ -727,6 +750,9 @@ text-align: center;
   font-family:OpenSans-Bold;
 }
 /* contact us css */
+.contactus-sec-1{
+  margin-top:40px!important;background-image: url(assets/img/contactus/contactusbanner-small.png); height:456px;background-size: cover;
+}
 .contactus-sec-3{
   background: #fef8f5 0% 0% no-repeat padding-box;
   padding: 40px 40px;
@@ -826,31 +852,141 @@ text-align: center;
           display:none;
         }
         .tab-menu{
-          display: none;
-        }
-        .mobile-menu{
-          display: block;
+          display:block!important;
         }
         .logoimg1{
           width:11%;
         }
       }
-      @media (min-width:320px) and (max-width:480px) { 
+      @media (min-width:320px) and (max-width:480px) {
+        .section{
+          padding: 0px 20px 0px 20px;
+        } 
+        .service-sec-4 h3{
+            margin-top: 30px;
+        }
+        .headerdownloadbtn {
+          margin-bottom: 20px;
+      }
+        /* slider css */
+        .desktopviewsec-5{
+          display: none;
+        }
+      .home-sec-5 .swiper-pagination{
+        display: inline-block;
+        }
+  
+        .home-sec-3 .swiper-pagination{
+          display: inline-block;
+          }
+    
+        /* home page  */
+        .mobilemt{
+          margin-bottom: 40px;
+        }
+        .googleplaydiv {
+          margin-top: 25px;
+      }
+      .googleappstorediv {
+        margin-top: 15px;
+    }
+    .commonsectionmt {
+      margin-top: 60px;
+  }
+  .footertop {
+    margin-top: -8px;
+}
+        .mobile-viewsec-5{
+          display: inline-block;
+        }
+
+        .homemobilebannerimgcont{
+          display:inline-block
+        }
+        .homemobilebannerimgcont img{
+          width: 100%;
+          margin-top:50px;
+        }
+        .commontitle {
+          font-size: 1.6rem;
+      }
+        .home-sec-1{
+          background-image: none;
+          height: auto;
+          
+        }
+        .title-head {
+          font-size: 1.7rem;
+      }
+      .home-banner{
+        padding-top:120px;
+      }
+      /* service page */
+      .service-sec-1{
+        background-image: none;
+        height: auto;
+      }
+      .service-banner{
+        padding-top:30px
+      }
+      .service-sec-2{
+          margin-top:50px;
+      }
+      .service-sec2-card {
+        margin-bottom: 30px;
+    }
+    .servicedownloadbtncontaner {
+      margin-bottom: 30px;
+  }
+  .swiper-button-prev{
+    display: none!important;
+  }
+  .swiper-button-next{
+    display: none!important;
+  }
+.drimg{
+width: 40%;
+}
+.commonmobilemarginbt{
+  margin-bottom: 40px;
+}
+.contactus-sec-1{
+ background-image: none;
+ height: auto;
+}
+        /* Header */
+        .mobilehide{
+          display: none;
+        }
+        /* how it work  */
+        .howitwork-sec-1 {
+          padding: 0px 0px 100px 0px;
+        }
+        .howitworkbannerimg{
+          padding-top: 50px;
+        }
+        .htw-common {
+          width: 100%;
+          padding: 0px 18px 84px 20px;
+        }
+        .howitwork-bg{
+          background-image: url("https://chatadoc.com/assets/img/new-home/mobile-img.png");
+          background-position: center;
+          height: auto;
+          background-size: 85% 100%;
+        }
        .site-logo{
          width: 50%;
          float:left;
        } 
        .tab-menu{
-        display: block!important; font-size: 27px!important; position: absolute; right: 32px; top: 27px;
+        display: block!important;
        }
-       .mobile-menu{
-         display: block;
-       }
-      .hide-moible{
-        display:none;
-      }
       .navbar-expand-lg {
-        flex-wrap: nowrap;
-        justify-content: flex-start!important;
-    }
+          flex-wrap: nowrap;
+          justify-content: flex-start!important;
+      }
+
+
+
       }  

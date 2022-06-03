@@ -1,22 +1,25 @@
 <header *ngIf="datamessage=='English'" #myHeader id="myHeader" (scroll)="myFunction()"  class="bbb site-navbar custom-header fixed-top" role="banner">
     <div class="container">
       <div class="row align-items-right">
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-          <h1 class="mb-0 site-logo"><a routerLink="/" class="mb-0"><img class="logoimg1" src="assets/img/home/logo.png" alt="Logo"></a></h1>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 " style="position:relative;">
+          <h1 class="mb-0 site-logo" (click)="closeNav()"><a routerLink="/" class="mb-0" (click)="closeNav()"><img class="logoimg1" src="assets/img/home/logo.png" alt="Logo"></a></h1>
           <!-- <h1 class="mb-0 site-logo1"><a href="index.html" class="mb-0"><img src="assets/img/chatall/logo.png" style="width:40%;"></a></h1> -->
-          <i class="fa fa-bars mobile-menu" aria-hidden="true" (click)="openNav()"></i>
+          <!-- <i class="fa fa-bars mobile-menu" aria-hidden="true" (click)="openNav()"></i> -->
+          <i class="fa fa-bars tab-menu" aria-hidden="true" (click)="openNav()" *ngIf="menuciondesktopopen"></i>
+          <!-- <i class="fa fa-bars tab-menu" aria-hidden="true" ></i> -->
+          <i class="fa fa-window-close tab-menu" aria-hidden="true" (click)="closeNav()" *ngIf="menuciondesktopclose"></i>
         </div>
        
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 mobilehide" id="removemobileview">
           <nav  class="nav text-right navbar navbar-expand-lg hide-moible justify-content-right" role="navigation">
             <ul class="navbar-nav">
               <!-- <li class="nav-item"><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li> -->
-              <li class="nav-item"><a routerLink="/how-it-work" routerLinkActive="active" class="nav-link">How it Works</a></li>
-              <li class="nav-item"><a routerLink="/service" routerLinkActive="active" class="nav-link">Services</a></li>
-              <!-- <li class="nav-item"><a routerLink="/patient" routerLinkActive="active" class="nav-link">Patients</a></li>
-              <li class="nav-item"><a routerLink="/provider"  routerLinkActive="active"class="nav-link">Providers</a></li> -->
-              <li class="nav-item"><a routerLink="/contact-us"  routerLinkActive="active" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a routerLink="/resource"  routerLinkActive="active" class="nav-link">Resource</a></li>
+              <li class="nav-item"><a routerLink="/how-it-work" (click)="closeNav()" routerLinkActive="active" class="nav-link">How it Works</a></li>
+              <li class="nav-item"><a routerLink="/service" (click)="closeNav()" routerLinkActive="active" class="nav-link">Services</a></li>
+              <!-- <li class="nav-item"><a routerLink="/patient" (click)="closeNav()" routerLinkActive="active" class="nav-link">Patients</a></li>
+              <li class="nav-item"><a routerLink="/provider"  (click)="closeNav()" routerLinkActive="active"class="nav-link">Providers</a></li> -->
+              <li class="nav-item"><a routerLink="/contact-us"  (click)="closeNav()" routerLinkActive="active" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a routerLink="/resource"  (click)="closeNav()" routerLinkActive="active" class="nav-link">Resource</a></li>
               <li class="nav-item" style="line-height:50px ;">
                 <img src="assets/img/home/langlogo.png" style="width: 20px;">
                 <select class="selecheaderlang" (change)='dataChangeLanguage(datamessage)' #v [(ngModel)]="datamessage">
@@ -42,46 +45,9 @@
             
           </nav>
        
-          <i class="fa fa-bars tab-menu" aria-hidden="true" (click)="openNav()"></i>
+          <!-- <i class="fa fa-bars tab-menu" aria-hidden="true" (click)="openNav()"></i> -->
         </div>
       </div>
     </div>
   </header>
 
-
-  <header *ngIf="datamessage=='हिंदी'" id="myHeader" class="site-navbar custom-header fixed-top" role="banner">
-    <div class="container">
-      <div class="row align-items-right">
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
-          <h1 class="mb-0 site-logo"><a routerLink="/" class="mb-0"><img class="logoimg1" src="assets/img/home/logo.png" alt="Logo"></a></h1>
-          <!-- <h1 class="mb-0 site-logo1"><a href="index.html" class="mb-0"><img src="assets/img/chatall/logo.png" style="width:40%;"></a></h1> -->
-          <i class="fa fa-bars mobile-menu" aria-hidden="true" (click)="openNav()"></i>
-        </div>
-       
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-          <nav  class="nav text-right navbar navbar-expand-lg hide-moible justify-content-right" role="navigation">
-            <ul class="navbar-nav">
-              <!-- <li class="nav-item"><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li> -->
-              <li class="nav-item"><a routerLink="/how-it-work" routerLinkActive="active" class="nav-link">How it Works hind</a></li>
-              <li class="nav-item"><a routerLink="/service" routerLinkActive="active" class="nav-link">Services</a></li>
-              <!-- <li class="nav-item"><a routerLink="/patient" routerLinkActive="active" class="nav-link">Patients</a></li>
-              <li class="nav-item"><a routerLink="/provider"  routerLinkActive="active"class="nav-link">Providers</a></li> -->
-              <li class="nav-item"><a routerLink="/contact-us"  routerLinkActive="active" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a routerLink="/resource"  routerLinkActive="active" class="nav-link">Resource</a></li>
-              <li class="nav-item">
-                <img src="assets/img/home/langlogo.png">
-                <select style="margin-top: 7px;margin-right: 40px;border: none;font-family: 'OpenSans-Regular' !important;font-size: 13px;" (change)='dataChangeLanguageHindi(datamessage)' #v [(ngModel)]="datamessage">
-                  <option>English</option>
-                  <option >हिंदी</option>
-                </select>
-              </li>
-              <li class="nav-item"><button class="btn"></button></li>
-            
-            </ul>
-            
-          </nav>
-          <i class="fa fa-bars tab-menu" aria-hidden="true" (click)="openNav()"></i>
-        </div>
-      </div>
-    </div>
-  </header>

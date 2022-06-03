@@ -46,8 +46,29 @@ export class HomeComponent implements OnInit {
       prevEl: '.swiper-button-prev'
     },
     spaceBetween:10,
-    slidesPerView: 6,
+    // slidesPerView: 6,
+    breakpoints: {
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerColumn: 3,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
+    }
   };
+
+
 config2:  SwiperOptions = {
 
   // pagination: { el: '.swiper-pagination', clickable: true },
@@ -90,9 +111,71 @@ config2:  SwiperOptions = {
     delay: 2000,
   },
   loop: false,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    }
+  }
+
 };
 
+config3:  SwiperOptions = {
 
+  fadeEffect: { crossFade: true },
+  effect: "fade",
+  speed:1000,
+  navigation: 
+  {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: 
+  {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+  autoplay: 
+  {
+    delay: 2000,
+  },
+  loop: false,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+   
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+  
+    }
+  }
+
+};
   ngOnInit(): void {
   
   }
@@ -108,6 +191,7 @@ config2:  SwiperOptions = {
       }
   }
   }
+  
   viewMore=()=>{
     console.log('click');
     this.listLast=18

@@ -14,6 +14,8 @@ import { CommonserviceService } from 'src/app/services/commonservice.service';
 })
 export class HeaderComponent implements OnInit {
   datamessage='English';
+  menuciondesktopopen=true;
+  menuciondesktopclose=false;
   constructor(public langaugeChange:CommonserviceService) { 
     // this.langaugeChange.lang.subscribe((res: any) => {  
     //   this.datamessage = res;  
@@ -52,13 +54,19 @@ myFunction() {
 }
   
   openNav() {
-    var mynav=document.getElementById("mySidenav")!;
-    mynav.style.width = "250px"
+    // alert("ok")
+    var mynav=document.getElementById("removemobileview")!;
+    mynav.classList.remove('mobilehide');
+    this.menuciondesktopopen=false;
+    this.menuciondesktopclose=true;
   }
   
  closeNav() {
-    var mynavclose=document.getElementById("mySidenav")!;
-       mynavclose.style.width = "0"
+  // alert("ok")
+    var mynav=document.getElementById("removemobileview")!;
+    mynav.classList.add('mobilehide');
+    this.menuciondesktopopen=true;
+    this.menuciondesktopclose=false;
   }
 
   dataChangeLanguage(data:any){
