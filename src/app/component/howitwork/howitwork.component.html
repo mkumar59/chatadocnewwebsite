@@ -1,11 +1,8 @@
-<section class="howitwork-sec-1 section1">
+<section class="howitwork-sec-1 section1" *ngIf="dataLang=='English'">
     <div class="container">
        <div class="row">
           <div class="col-md-6 howitwork-banner">
-             <!-- <h2 class="bannerhead2">Welcome</h2> -->
              <h1 class="title-head pb-4">Your Mental Health Is Just A Click Away</h1>
-             <!-- <p class="banner-text">Your Mental Health is just a click away</p> -->
-             <!-- <p *ngIf="datamessage=='हिंदी'" class="banner-text">अपने स्मार्टफ़ोन, टेबलेट, या कंप्यूटर का उपयोग करके मिनटों में डॉक्टर से ऑनलाइन मिलिए। <br></p> -->
              <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank"><img src="assets/img/home/goolgeplayeng.png"></a></button>
              <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png" ></a></button>
           </div>
@@ -14,10 +11,25 @@
           </div>
        </div>
     </div>
-    <!-- </div> -->
- </section>
 
- <section class="section howitwork-sec-2 commonsectionmt commonsectionbt">
+ </section>
+<!--hindi section--->
+ <section class="howitwork-sec-1 section1" *ngIf="dataLang=='हिंदी'">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-6 howitwork-banner">
+           <h1 class="title-head pb-4">आपका मानसिक स्वास्थ्य बस एक क्लिक दूर है</h1>
+           <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank"><img src="assets/img/home/goolgeplayeng.png"></a></button>
+           <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png" ></a></button>
+        </div>
+        <div class="col-md-6 imgheader">
+           <img src="assets/img/howitwork/howtoworkimg.webp" class="howitworkbannerimg" alt="App store"/>
+        </div>
+     </div>
+  </div>
+</section>
+
+ <section class="section howitwork-sec-2 commonsectionmt commonsectionbt" *ngIf="dataLang=='English'">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -70,6 +82,56 @@
    
     
     </div>
+</section>
+
+<!----Hindi section--->
+<section class="section howitwork-sec-2 commonsectionmt commonsectionbt" *ngIf="dataLang=='हिंदी'">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="commontitle">
+          यह काम किस प्रकार करता है
+        </h2>
+      </div>
+    </div>
+    <h4>शुरू</h4>
+       <div class="row howitwork-bg mt-5 desktop-howitwork">
+           <div class="col-md-12">
+            <div class="htw-common">   
+            
+              <h4>01</h4>
+              <img src="assets/img/howitwork/noun_enroll_115801.png" alt="Download App"/>
+              <h3>Register</h3>
+              <p>Download the Chat-A-Doc app<br> from Google store /Apple store <br>and create a quick profile</p>
+             
+            </div>
+          
+            <div class="htw-common">
+              <h4>02</h4>
+            <img src="assets/img/howitwork/noun_Doctor_1638197.png" alt="Choose your doctor"/>
+            <h3>अपने डॉक्टर को चुनें </h3>
+            <p>उस डॉक्टर को चुनें जो आपके लिए सुविधाजनक समय पर उपलब्ध हैं।</p>
+          </div>
+          <div class="htw-common">
+            <h4>03</h4>
+          <img src="assets/img/howitwork/noun_Online Doctor_1172338.png" alt="Video Chat Visit"/>
+          <h3>विडियो चैट परामर्श सत्र</h3>
+          <p>डॉक्टर से आपका परामर्श करवाया जाता है और आपको कौनसी दवाइयाँ देनी है यह निर्धारित होता है। </p>
+        </div>
+            <div class="htw-common">
+              <h4>04</h4>
+            <img src="assets/img/howitwork/prescription.png" alt="Get your prescription"/>
+            <h3>अपना पर्चे लें</h3>
+            <p>अपने स्थानीय औषधि-विक्रेता से अपनी पर्ची लीजिए। </p>
+          </div>
+        
+        </div>
+       </div>
+    
+  <!---Hindi-->
+ 
+  
+  </div>
 </section>
 
 

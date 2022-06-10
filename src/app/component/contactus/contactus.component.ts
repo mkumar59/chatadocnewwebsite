@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonserviceService } from 'src/app/services/commonservice.service';
 @Component({
   selector: 'app-contactus',
   templateUrl: './contactus.component.html',
@@ -13,7 +14,14 @@ export class ContactusComponent implements OnInit {
   parameter:any;
   showMessage:any;
   data:any;
-  constructor(private formBuilder: FormBuilder,private http:HttpClient) { }
+  dataLang='English';
+  constructor(private formBuilder: FormBuilder,private http:HttpClient,private langaugeChange:CommonserviceService) {
+    
+    this.langaugeChange.lang.subscribe((res)=>{
+        this.dataLang=res;
+    })
+
+   }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({

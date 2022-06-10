@@ -4,9 +4,10 @@
     <div class="container"> 
     <div class="row">
         <div class="col-12 col-sm-12 col-md-5 col-lg-5 home-banner">
-          <h2 class="title-head">One Click And <br>We Are Here!</h2>
+          <h2 class="title-head" *ngIf="dataLang=='English'">One Click And <br>We Are Here!</h2>
+          <h2 *ngIf="dataLang=='हिंदी'">एक क्लिक और
+            हम यहाँ हैं!</h2>
         </div>
-      
       </div>
     </div> 
 </section>
@@ -19,7 +20,8 @@
     <div class="container">
         <div class="row commonmobilemarginbt">
             <div class="col-md-12">
-                <h2 class="title-head">We'd love to hear from you</h2>
+                <h2 class="title-head"  *ngIf="dataLang=='English'" >We'd love to hear from you</h2>
+                <h2 class="title-head" *ngIf="dataLang=='हिंदी'">हमें आपसे सुनकर अत्यंत खुशी होगी</h2>
             </div>
         </div>
         <div class="row">
@@ -32,7 +34,7 @@
     </div>
 </section>
 
-<section class="contactus-sec-3 commonsectionmt" id="contactusform" #contactusform>
+<section *ngIf="dataLang=='English'"class="contactus-sec-3 commonsectionmt" id="contactusform" #contactusform>
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -61,7 +63,7 @@
                     <input type="text" class="form-control" id="email" formControlName="email" placeholder="Email">
                     <div *ngIf="submitted && f.email.errors">
                         <div *ngIf="f.email.errors.required">Email is required</div>
-                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        <div *ngIf="f.email.errors.email">Email must be valid</div>
                     </div>
                   </div>
                   <div class="mb-4">
@@ -82,16 +84,68 @@
     </div>
 </section>
 
+<!---Hindi-->
+<section *ngIf="dataLang=='हिंदी'" class="contactus-sec-3 commonsectionmt" id="contactusform" #contactusform>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3 class="contactustitle">जिस तरह से आप देखभाल प्राप्त करते हैं उस पर पुनर्विचार करें <br>लाखों में शामिल हो रहे हैं जो पहले से ही करते हैं।</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="formSubmit(registerForm)">
+                <div class="mt-4 mb-4">
+                    <input type="text" class="form-control" id="yourname" formControlName="first_name" placeholder="पहला नाम*">
+                    <div *ngIf="submitted && f.first_name.errors">
+                        <div *ngIf="f.first_name.errors.required" class="requared">पहला नाम आवश्यक है</div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-4">
+                    <input type="text" class="form-control" id="yourname" formControlName="last_name" placeholder="उपनाम*">
+                    <div *ngIf="submitted && f.last_name.errors">
+                        <div *ngIf="f.last_name.errors.required" class="requared">उपनाम आवश्यक है</div>
+                    </div>
+                </div>
+                  <div class="mb-4">
+                    <input type="text" class="form-control" id="phone" minlength="10" maxlength="10" formControlName="phone" placeholder="मोबाइल नंबर*">
+                    <div *ngIf="submitted && f.phone.errors" class="">  
+                        <div *ngIf="f.phone.errors.required" class="requared">मोबाइल नंबर आवश्यक है.</div>  
+                        <div *ngIf="f.phone.errors.pattern" class="requared">कृपया, 10 अंकों का मोबाइल नंबर दर्ज करें.</div>  
+                    </div> 
+                  </div>
+                  <div class="mb-4">
+                    <input type="text" class="form-control" id="email" formControlName="email" placeholder="ईमेल">
+                    <div *ngIf="submitted && f.email.errors">
+                        <div *ngIf="f.email.errors.required">ईमेल की जरूरत है</div>
+                        <div *ngIf="f.email.errors.email">ईमेल मान्य होना चाहिए</div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <textarea class="form-control" id="yourmessage" formControlName="message"  rows="3" placeholder="Message"></textarea>
+                    <!-- <div *ngIf="submitted && f.message.errors" >
+                        <div *ngIf="f.message.errors.required">Message is required</div>
+                    </div> -->
+                  </div>
+                  <div class="mb-4">
+                    {{showMessage}}
+                  </div>
+                  <div class="mb-4">
+                    <button class="submitbtn" type="submit">Submit</button>
+                  </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+</section>
 <section class="contactus-sec-4 commonsectionmt commonsectionbt">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="title-head">We're Social!</h2>
+                <h2 class="title-head" *ngIf="dataLang=='English'" >We're Social!</h2>
+                <h2 class="title-head" *ngIf="dataLang=='हिंदी'" >हम सामाजिक हैं!</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 commonmobilemarginbt">
-                <p>Follow us on your favorite social media sites! Share your experience using the hashtag #CHATADOC</p>
+                <p *ngIf="dataLang=='English'">Follow us on your favorite social media sites! Share your experience using the hashtag #CHATADOC</p>
+                <p *ngIf="dataLang=='हिंदी'" >अपने पसंदीदा सोशल मीडिया साइट्स पर हमें फॉलो करें! हैशटैग का उपयोग करके अपना अनुभव साझा करें #CHATADOC</p>
                 <div class="socialiconconatien">
                  <a href="https://www.facebook.com/chatadoc1" target="_blank">   <img class="socialiconcommon" src="assets/img/contactus/fb.png" alt="fb"></a>
                  <a href="https://www.instagram.com/chat_a_doc/" target="_blank">  <img class="socialiconcommon" src="assets/img/contactus/insta.png" alt="insta"></a>

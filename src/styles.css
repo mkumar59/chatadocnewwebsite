@@ -28,6 +28,7 @@
     src: url(./assets/fonts/OpenSans-Regular.ttf);
   }
   /* loader */
+
   .resource-sec-1 ul{
     margin-left: 20px
   }
@@ -841,6 +842,11 @@ width: 100%;
 
 
 /* footer css start */
+.flagIcon {
+  margin-right: 6px;
+  margin-left: 14px;
+  width: 30px;
+}
 .footerdownloadbtn{
   background: #773DDC 0% 0% no-repeat padding-box;
   border-radius: 4px;
@@ -877,7 +883,7 @@ width: 100%;
     text-decoration: none;
 }
 .social{
-    margin-left: 20px;
+    margin-left:12px;
 }
 .footer2{
     background: #E5D9F9 0% 0% no-repeat padding-box;
@@ -1167,5 +1173,11 @@ width: 40%;
       }
       .banner-text{
         font-size: 1.3rem;
+      }
+      .flagIcon {
+        margin-left:0px;
+      }
+      .flagIconmobile{
+        margin-left:10px
       }
       }  
