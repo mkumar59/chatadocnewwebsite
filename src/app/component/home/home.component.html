@@ -1,41 +1,52 @@
-<section class="home-sec-1">
+<section class="home-sec-1" *ngIf="dataLang=='English'" >
   <div class="container">
      <div class="row">
         <div class="col-12 col-sm-7 col-md-7 col-lg-7 home-banner">
            <!-- <h2 class="bannerhead2">Welcome</h2> -->
-           <h1 class="title-head" *ngIf="dataLang=='English'">Right Doctor . Right Time<br> Right Cost . Any Place</h1>
-           <h1 class="title-head" *ngIf="dataLang=='हिंदी'"> सही डॉक्टर  सही समय सही फीस  कहीं भी </h1>
-           <p class="banner-text">See a doctor or a healthcare expert online in minutes using your Phone or Tablet</p>
-           <!-- <p *ngIf="datamessage=='हिंदी'" class="banner-text">अपने स्मार्टफ़ोन, टेबलेट, या कंप्यूटर का उपयोग करके मिनटों में डॉक्टर से ऑनलाइन मिलिए। <br></p> -->
+           <h1 class="title-head" >Right Doctor . Right Time<br> Right Cost . Any Place</h1>
+           <p class="banner-text" >See a doctor or a healthcare expert online in minutes using your Phone or Tablet</p>
            <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc"><img src="assets/img/home/goolgeplayeng.png"></a></button>
            <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png"></a></button>
-           <!-- <button *ngIf="datamessage=='हिंदी'" data-toggle="modal" data-target="#myModal2" class="btn btn1" style="background-image: url('assets/img/new-patient/common-btn.png');">आज ही हमसे जुड़ें </button> -->
         </div>
       
      </div>
   </div>
 </section>
+<section class="home-sec-1" *ngIf="dataLang=='हिंदी'">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-sm-7 col-md-7 col-lg-7 home-banner">
+            <!-- <h2 class="bannerhead2">Welcome</h2> -->
+            <h1 class="title-head" > सही डॉक्टर। सही समय सही लागत। किसी भी जगह </h1>
+            <p  class="banner-text">अपने फ़ोन या टैबलेट का उपयोग करके मिनटों में किसी डॉक्टर या स्वास्थ्य विशेषज्ञ से ऑनलाइन मिलें <br></p>
+            <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc"><img src="assets/img/home/goolgeplayeng.png"></a></button>
+            <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png"></a></button>
+         </div>
+       
+      </div>
+   </div>
+ </section>
 <section class="mobile-bannersection homemobilebannerimgcont">
    <div class="col-12 col-sm-12 col-md-12 col-lg-12 homemobilebannerimgcont">
       <img src="assets/img/home/home-banner-formobile.png" class="homemobilebannerimg">
    </div>
 </section>
 <!-- section two -->
-<section class="sec-2 section commonsectionmt">
+<section class="sec-2 section commonsectionmt" *ngIf="dataLang=='English'" >
   <div class="container">
      <div class="row">
         <div class="col-md-12">
-           <h2 class="commontitle">See Our Mental Health Experts From Anywhere, Anytime</h2>
-           <!-- <h2  *ngIf="datamessage=='हिंदी'" class="title title1width commontitle">अब डॉक्टर से मिलिए - कहीं भी, कभी भी </h2> -->
+           <h2 class="commontitle" *ngIf="dataLang=='English'" >See Our Mental Health Experts From Anywhere, Anytime</h2>
         </div>
      </div>
      <div class="row mt-3">
         <div class="col-md-6">
-           <p>
+           <p *ngIf="dataLang=='English'"  >
             Chat - A- Doc is a simple, safe and secured space for sharing your mental health related issues. Get in touch with our board of Licensed experts and take a step towards maintaining your mental well- being. Access this online platform from the ease and comfort of your space - be it home or workspace, and get immediate mental health support.           </p>
            <!-- <p  *ngIf="datamessage=='हिंदी'"> -->
            <!-- आपके लिए अब आवश्यक स्वास्थ्य सेवाएँ प्राप्त करने का एक सरल, सुरक्षित और सुविधाजनक तरीका । अपना आरामदायक घर छोड़े बिना बोर्ड-प्रमाणित चिकित्सकों के साथ लाइव वीडियो चैट की सुविधा चैट-ए- डॉक आपको प्रदान करता है, । चैट-ए-डॉक उन कई बाधाओं को समाप्त करता है जो लोगों को स्वास्थ्य सेवा तक पहुंचने से रोकती हैं जैसे: खर्च,  कार्य से समय निकालना, परिवहन से जुड़े मुद्दे और अधिक कीटाणुओं के संपर्क में आना।  -->
            <!-- </p>   -->
+          
         </div>
         <div class="col-md-6">
            <video class="section-2-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" controls>
@@ -45,13 +56,39 @@
      </div>
   </div>
 </section>
+<section class="sec-2 section commonsectionmt" *ngIf="dataLang=='हिंदी'">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h2 class="commontitle"  >हमारे मानसिक स्वास्थ्य विशेषज्ञों को कहीं से भी, कभी भी देखें</h2>
+         </div>
+      </div>
+      <div class="row mt-3">
+         <div class="col-md-6">
+            <p  >
+               चैट - ए- डॉक्टर आपके मानसिक स्वास्थ्य संबंधी मुद्दों को साझा करने के लिए एक सरल, सुरक्षित और सुरक्षित स्थान है। हमारे लाइसेंस प्राप्त विशेषज्ञों के बोर्ड से संपर्क करें और अपने मानसिक स्वास्थ्य को बनाए रखने की दिशा में एक कदम उठाएं। इस ऑनलाइन प्लेटफ़ॉर्म को अपने स्थान की आसानी और आराम से एक्सेस करें - चाहे वह घर हो या कार्यक्षेत्र, और तत्काल मानसिक स्वास्थ्य सहायता प्राप्त करें।         </p>
+            <!-- <p  *ngIf="datamessage=='हिंदी'"> -->
+            <!-- आपके लिए अब आवश्यक स्वास्थ्य सेवाएँ प्राप्त करने का एक सरल, सुरक्षित और सुविधाजनक तरीका । अपना आरामदायक घर छोड़े बिना बोर्ड-प्रमाणित चिकित्सकों के साथ लाइव वीडियो चैट की सुविधा चैट-ए- डॉक आपको प्रदान करता है, । चैट-ए-डॉक उन कई बाधाओं को समाप्त करता है जो लोगों को स्वास्थ्य सेवा तक पहुंचने से रोकती हैं जैसे: खर्च,  कार्य से समय निकालना, परिवहन से जुड़े मुद्दे और अधिक कीटाणुओं के संपर्क में आना।  -->
+            <!-- </p>   -->
+           
+         </div>
+         <div class="col-md-6">
+            <video class="section-2-video" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" controls>
+               <source src="assets/img/home/home-video.mp4" type="video/mp4">
+            </video>
+         </div>
+      </div>
+   </div>
+ </section>
 <!-- section three -->
-<section class="home-sec-3 section commonsectionmt">
+<section class="home-sec-3 section commonsectionmt"  *ngIf="dataLang=='English'">
   <div class="container">
      <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
            <h2 class="commontitle">Benefits Of Telemedicine</h2>
-           <p>Tele Consultation became a need of the hour, particularly during pandemic situation. This revolutionized the field of Tele - Medicine and Tele -Counselling making it more client centric. Although such practice did exit earlier but people realized its ease and significance lately. Advancement of technology added ever more and precipitated with growth and accessibility.</p>
+
+           <p >Tele Consultation became a need of the hour, particularly during pandemic situation. This revolutionized the field of Tele - Medicine and Tele -Counselling making it more client centric. Although such practice did exit earlier but people realized its ease and significance lately. Advancement of technology added ever more and precipitated with growth and accessibility.</p>
+
         </div>
      </div>
      <div class="row">
@@ -60,27 +97,30 @@
               <div class="swiper-wrapper">
                  <div class="swiper-slide">
                     <img src="assets/img/home/b1.svg" alt="img 1">
-                    <p>Easy to access & use</p>
+                    <p >Easy to access & use</p>
+
                  </div>
                  <div class="swiper-slide">
                     <img src="assets/img/home/b2.svg" alt="img 1"> 
-                    <p>Saves time & energy</p>
+                    <p >Saves time & energy</p>
+
                  </div>
                  <div class="swiper-slide">
                     <img src="assets/img/home/b3.svg" alt="img 1">
-                    <p>Aids to comfort & convenience</p>
+                    <p >Aids to comfort & convenience</p>
+
                  </div>
                  <div class="swiper-slide">
                     <img src="assets/img/home/b4.svg" alt="img 1">
-                    <p>Safety from infectious disease</p>
+                    <p >Safety from infectious disease</p>
                  </div>
                  <div class="swiper-slide">
                     <img src="assets/img/home/b5.svg" alt="img 1">
-                    <p>Support for chronic conditions</p>
+                    <p >Support for chronic conditions</p>
                  </div>
                  <div class="swiper-slide">
                     <img src="assets/img/home/b6.svg" alt="img 1">
-                    <p>Cost benefits & Ease of availability</p>
+                    <p >Cost benefits & Ease of availability</p>
                  </div>
               </div>
               <!-- Add Pagination -->
@@ -93,8 +133,66 @@
      </div>
   </div>
 </section>
+
+<section class="home-sec-3 section commonsectionmt" *ngIf="dataLang=='हिंदी'">
+  <div class="container">
+     <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+           <h2 class="commontitle">टेलीमेडिसिन के लाभ </h2>
+
+           <p >टेली कंसल्टेशन समय की जरूरत बन गया है, खासकर महामारी की स्थिति के दौरान। इसने टेली-मेडिसिन और टेली-काउंसलिंग के क्षेत्र में क्रांति ला दी और इसे और अधिक ग्राहक केंद्रित बना दिया। हालाँकि इस तरह की प्रथा पहले बाहर हो गई थी लेकिन लोगों को इसकी सहजता और महत्व का एहसास हाल ही में हुआ। प्रौद्योगिकी के विकास ने और अधिक वृद्धि की और विकास और पहुंच के साथ अवक्षेपित हुआ।</p>
+
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-12">
+           <swiper [config]="config">
+              <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b1.svg" alt="img 1">
+                    <p >उपयोग और उपयोग में आसान</p>
+
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b2.svg" alt="img 1"> 
+                   
+                    <p >समय और ऊर्जा बचाता है</p>
+
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b3.svg" alt="img 1">
+                    <p>आराम और सुविधा के लिए सहायता</p>
+
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b4.svg" alt="img 1">
+                    <p >संक्रामक रोग से सुरक्षा </p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b5.svg" alt="img 1">
+                    <p >पुरानी स्थितियों के लिए सहायता</p>
+                 </div>
+                 <div class="swiper-slide">
+                    <img src="assets/img/home/b6.svg" alt="img 1">
+                    <p >लागत लाभ और उपलब्धता में आसानी</p>
+                 </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+           </swiper>
+        </div>
+     </div>
+  </div>
+</section>
+
+
+
+
 <!-- section four -->
-<section class="home-sec-4 commonsectionmt">
+<section class="home-sec-4 commonsectionmt"  *ngIf="dataLang=='English'">
   <div class="container">
      <div class="row mb-4">
         <div class="col-md-12">
@@ -124,8 +222,38 @@
   </div>
 </section>
 
+<section class="home-sec-4 commonsectionmt"  *ngIf="dataLang=='हिंदी'">
+   <div class="container">
+      <div class="row mb-4">
+         <div class="col-md-12">
+            <h2 class="commontitle">चिकित्सा शर्तों का इलाज</h2>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+           <div class="medicaltabcontainer">
+            <div class="medicaltab1" *ngFor="let item of medicianList1.slice(listUni,listLast)">
+               <!-- <input type="radio" id="Physician" [checked]="item.b=='true'"  name="Physician1" value="Physician"/> -->
+               <img src="{{item.dotimg}}" class="chelboxlabel" (click)="medicianListFun1(item)" *ngIf="item.b=='true'"/>
+               <img src="{{item.dotimg}}" class="chelboxlabel" (click)="medicianListFun1(item)" *ngIf="item.b=='false'"/>
+               <label for="Physician" class="chelboxlabel" (click)="medicianListFun1(item)"> {{item.label}} </label><br>
+               <p class="mediciantexttab"  *ngIf="item.b=='true'">{{item.description}}</p>
+            </div>
+           </div>
+           <div class="mobilemt">
+              <button   *ngIf="viewMoreBtn" class="knowmorebtn"  (click)="viewMore()">और देखें</button>
+              <button   *ngIf="viewLessBtn" class="knowmorebtn"  (click)="lessMore()">कम अधिक</button>
+           </div>
+         </div>
+         <div class="col-md-6">
+          <img src="{{showImgmedician}}" style="width: 100%;" alt=""/>
+         </div>
+      </div>
+   </div>
+ </section>
+ 
 <!-- Section five -->
-<section class="home-sec-5 commonsectionmt desktopviewsec-5">
+<section class="home-sec-5 commonsectionmt desktopviewsec-5"  *ngIf="dataLang=='English'">
   <div class="container">
      <div class="row">
         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
@@ -157,7 +285,39 @@
      </div>
   </div>
 </section>
-<section class="mobile-viewsec-5 home-sec-5 commonsectionmt">
+<section class="home-sec-5 commonsectionmt desktopviewsec-5"  *ngIf="dataLang=='हिंदी'">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>197+M</h3>
+            <p>2019 तक भारत में लोगों को मानसिक विकार थे</p>
+         </div>
+         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>56M</h3>
+            <p>भारतीय अवसाद से पीड़ित हैं और अन्य 38 मिलियन भारतीय चिंता विकारों से पीड़ित हैं।</p>
+         </div>
+         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>28.3L</h3>
+            <p>टेली काउंसलिंग सत्र केवल महामारी की स्थिति के दौरान हुआ, गिनती जारी है</p>
+         </div>
+         <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+            <h3>55%</h3>
+            <p>भारतीय कर्मचारियों में से तनाव महसूस करते हैं, प्रमुख रूप से टेली-काउंसलिंग की तलाश करते हैं</p>
+         </div>
+      </div>
+      <div class="row mt-4">
+         <div class="col-12 col-sm-4 col-md-4 col-lg-4 offset-md-2">
+            <h3>11-35</h3>
+            <p>वृद्ध लोग विभिन्न ऑनलाइन पोर्टलों पर ऑनलाइन परामर्श सत्र पसंद करते हैं</p>
+         </div>
+         <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+            <h3>7%</h3>
+            <p>आमने-सामने परामर्श से लेकर टेली-काउंसलिंग तक वरीयता में वृद्धि</p>
+         </div>
+      </div>
+   </div>
+ </section>
+<section class="mobile-viewsec-5 home-sec-5 commonsectionmt"  *ngIf="dataLang=='English'" >
       <div class="container">
          <swiper [config]="config3">
             <div class="swiper-wrapper">
@@ -194,9 +354,45 @@
          </swiper>
       </div>
 </section>
-
+<section class="mobile-viewsec-5 home-sec-5 commonsectionmt"  *ngIf="dataLang=='हिंदी'">
+   <div class="container">
+      <swiper [config]="config3">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <h3>197+M</h3>
+               <p>2019 तक भारत में लोगों को मानसिक विकार थे</p>
+            </div>
+            <div class="swiper-slide">
+               <h3>56M</h3>
+               <p>भारतीय अवसाद से पीड़ित हैं और अन्य 38 मिलियन भारतीय चिंता विकारों से पीड़ित हैं।</p>
+            </div>
+            <div class="swiper-slide">
+               <h3>28.3L</h3>
+               <p>टेली काउंसलिंग सत्र केवल महामारी की स्थिति के दौरान हुआ, गिनती जारी है</p>
+            </div>
+            <div class="swiper-slide">
+               <h3>55%</h3>
+               <p>भारतीय कर्मचारियों में से तनाव महसूस करते हैं, प्रमुख रूप से टेली-काउंसलिंग की तलाश करते हैं</p>
+            </div>
+            <div class="swiper-slide">
+               <h3>11-35</h3>
+               <p>वृद्ध लोग विभिन्न ऑनलाइन पोर्टलों पर ऑनलाइन परामर्श सत्र पसंद करते हैं</p>
+            </div>
+            <div class="swiper-slide">
+               <h3>7%</h3>
+               <p>आमने-सामने परामर्श से लेकर टेली-काउंसलिंग तक वरीयता में वृद्धि</p>
+            </div>
+         </div>
+         <!-- Add Pagination -->
+         <div class="swiper-pagination"></div>
+         <!-- Add Arrows -->
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </swiper>
+   </div>
+</section>
 <!-- Section six -->
-<section class="section home-sec-6 commonsectionmt">
+<section class="section home-sec-6 commonsectionmt" *ngIf="dataLang=='English'">
   <div class="container">
      <div class="row">
         <h2 class="commontitle">Download Now</h2>
@@ -215,3 +411,22 @@
      </div>
   </div>
 </section>
+<section class="section home-sec-6 commonsectionmt" *ngIf="dataLang=='हिंदी'">
+   <div class="container">
+      <div class="row">
+         <h2 class="commontitle">अब डाउनलोड करो</h2>
+         <!-- <h2 class="title title5width commontitle mb-3" *ngIf="datamessage=='हिंदी'">अभी डाऊनलोड करें </h2> -->
+         <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+            <div class="googleplaydiv">
+               <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank"><img src="assets/img/home/goolgeplayeng.png"></a></button>
+            </div>
+            <div class="googleappstorediv">          
+               <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png"></a></button>
+            </div>
+         </div>
+         <div class="col-6 col-ms-6  col-md-6  col-lg-6 offset-md-1">
+            <img class="downloadimg" src="assets/img/home/sec-5-downloadimglarge.webp" alt="download images">
+         </div>
+      </div>
+   </div>
+ </section>

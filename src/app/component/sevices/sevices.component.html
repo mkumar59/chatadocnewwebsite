@@ -18,14 +18,33 @@
     </div>
   </div>
 </section>
+<section class="service-sec-1 section" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 service-banner">
+        <h2 class="title-head mb-4">
+          आपका मानसिक स्वास्थ्य<br />
+          क्या हमारी प्राथमिकता
+        </h2>
+        <button class="downloadbtn">
+          <a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank"><img src="assets/img/home/goolgeplayeng.png" /></a>
+        </button>
+        <button class="downloadbtn">
+          <a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png" /></a>
+        </button>
+      </div>
+    
 
+    </div>
+  </div>
+</section>
 <section class="mobilesection homemobilebannerimgcont">
  
     <img src="assets/img/service/service-mobile-bannerimg.webp" class="homemobilebannerimg">
 
 </section>
 
-<section class="service-sec-2 commonsectionmt section">
+<section class="service-sec-2 commonsectionmt section" *ngIf="datamessage == 'English'">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-12">
@@ -101,7 +120,80 @@
     </div>
   </div>
 </section>
-<section class="service-sec-3 section commonsectionmt">
+<section class="service-sec-2 commonsectionmt section" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h2 class="title-head">आपको थेरेपी/परामर्श की आवश्यकता कब पड़ती है?</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-lg-2">
+        <div class="service-sec2-card">
+          <img src="assets/img/service/manpic.png" alt="" />
+          <div
+            style="background: #f5f5f5 0% 0% no-repeat padding-box; height: 1px"
+          ></div>
+          <p class="servicesec2commontext">
+            यदि आप दिन के अधिकांश भाग में 2 सप्ताह या उससे अधिक समय तक परेशान महसूस करते हैं।   </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="service-sec2-card">
+          <img src="assets/img/service/Femailimg.png" alt="" />
+          <div
+            style="background: #f5f5f5 0% 0% no-repeat padding-box; height: 1px"
+          ></div>
+          <p class="servicesec2commontext">
+            अगर आप किसी बात को लेकर लगातार चिंतित रहने से खुद को रोक नहीं पा रहे हैं।.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="service-sec2-card">
+          <img src="assets/img/service/hostiptalbed.png" alt="" />
+          <div
+            style="background: #f5f5f5 0% 0% no-repeat padding-box; height: 1px"
+          ></div>
+          <p class="servicesec2commontext">
+            अगर आप ठीक से सो नहीं पा रहे हैं।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="service-sec2-card">
+          <img src="assets/img/service/separate-125793.png" alt="" />
+          <div
+            style="background: #f5f5f5 0% 0% no-repeat padding-box; height: 1px"
+          ></div>
+          <p class="servicesec2commontext">
+            लोगों के साथ बातचीत करने का मन नहीं करता है।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="service-sec2-card">
+          <img src="assets/img/service/manlogo.png" alt="" />
+          <div
+            style="background: #f5f5f5 0% 0% no-repeat padding-box; height: 1px"
+          ></div>
+          <p class="servicesec2commontext">
+            यदि आप काम/शिक्षा पर ध्यान केंद्रित नहीं कर पा रहे हैं।          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="service-sec2-card">
+          <img src="assets/img/service/Group123.png" alt="" />
+          <div
+            style="background: #f5f5f5 0% 0% no-repeat padding-box; height: 1px"
+          ></div>
+          <p class="servicesec2commontext">थकान या सुस्ती महसूस होना।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-sec-3 section commonsectionmt" *ngIf="datamessage == 'English'">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -149,8 +241,54 @@
     <!---Hindi-->
   </div>
 </section>
+<section class="service-sec-3 section commonsectionmt" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="title-head pt-5">चैट-ए-डॉक क्यों?</h2>
+        <ul>
+          <li>
+            <img src="assets/img/service/tap.png" alt="tap" /> परामर्श बस एक क्लिक दूर
 
-<section class="service-sec-4 commonsectionmt">
+          </li>
+          <li>
+            <img src="assets/img/service/tap.png" alt="tap" /> सुरक्षित और गोपनीय
+
+          </li>
+          <li>
+            <img src="assets/img/service/tap.png" alt="tap" /> पूर्ण और लाइसेंस प्राप्त पेशेवर
+          </li>
+          <li>
+            <img src="assets/img/service/tap.png" alt="tap" /> जजमेंट फ्री स्पेस
+
+          </li>
+          <li>
+            <img src="assets/img/service/tap.png" alt="tap" /> सुरक्षित प्लेटफार्म-
+            एचआईपीपीए अनुपालन और 256-बिट एसएसएल सिक्योर
+          </li>
+        </ul>
+        <div class="servicedownloadbtncontaner">
+          <span>ऐप डाउनलोड करें</span>
+          <a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank" >
+            <img src="assets/img/service/android.png" />
+          </a>
+          <a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank">
+            <img src="assets/img/service/ios.png" />
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img
+          src="assets/img/service/service-sec-3-mobileimg.png"
+          class="whychatadocimg"
+          alt=""
+        />
+      </div>
+    </div>
+    <!---Hindi-->
+  </div>
+</section>
+<section class="service-sec-4 commonsectionmt" *ngIf="datamessage == 'English'">
   <div class="container">
     <div class="row mb-3">
       <div class="col-md-12">
@@ -245,8 +383,103 @@
     </swiper>
   </div>
 </section> 
+<section class="service-sec-4 commonsectionmt" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2 class="title-head">सबसे सफल की कहानियां</h2>
+      </div>
+    </div>
+    <swiper [config]="config">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="row">
+            <!-- <div class="col-md-6">
+              <img src="assets/img/service/dipika.png" class="img" />
+            </div> -->
+            <div class="col-md-12">
+              <h3>दीपिका पादुकोने</h3>
+              <p>
+                प्रमुख अभिनेत्री दीपिका पादुकोण उसे साझा करने के लिए बाहर आती हैं
+                उसके 'पेशेवर' के समय में अवसाद का निदान
+                उच्च' वह साझा करती है कि एक अच्छा आहार बनाए रखना कितना महत्वपूर्ण है,
+                उचित नींद, व्यायाम, जलयोजन और दिमागीपन का अभ्यास करने के लिए
+                पुनरावृत्ति को रोकें। अब वह एक प्रमुख मानसिक स्वास्थ्य फाउंडेशन चलाती हैं
+                - जियो प्यार करो हंसो
+              </p>
+              <div class="reflink"><a href="https://www.cnbc.com/2020/01/29/bollywoods-deepika-padukones-battle-with-mental-illness-depression.html" target="_blank">संदर्भ। सीएनबीसी.कॉम
+              </a></div>
+              <a class="takeyourfirststep" class="takeyourfirststep" [routerLink]="['/contact-us/']" fragment="contactusform">
+                आज ही अपना पहला कदम उठाएं!
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="row">
+            <!-- <div class="col-md-6">
+              <img src="assets/img/service/kapil.png" class="img" />
+            </div> -->
+            <div class="col-md-12">
+              <h3>Kapil Sharma</h3>
+              <p>
+                घर का नाम जो हर भारतीय के लिए मुस्कान और हँसी लाता है
+                हाउसहोल, एक बार मुस्कुराना मुश्किल हो रहा था। कपिल शर्मा
+                अवसाद के साथ अपने संघर्ष को साझा करता है; महत्व के बारे में बात करता है
+                समर्थन प्रणाली की और मदद लेने की आवश्यकता
+              </p>
+              <div class="reflink"><a href="https://timesofindia.indiatimes.com/web-series/news/hindi/kapil-sharma-opens-up-on-battling-depression-i-had-stopped-smiling/articleshow/89180837.cms" target="_blank">संदर्भ। टाइम्स ऑफ इंडिया
+              </a></div>
+              <a class="takeyourfirststep" class="takeyourfirststep" [routerLink]="['/contact-us/']" fragment="contactusform">
+                आज ही अपना पहला कदम उठाएं!
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="row">
+           <!-- <div class="col-md-6">
+             <img src="assets/img/service/harry.png" class="img" />
+           </div> -->
+           <div class="col-md-12">
+             <h3>प्रिंस हैरी</h3>
+             <p>
+              12 साल की उम्र में अपनी मां को खोने के बाद प्रिंस हैरी अपने 2 दशकों के मानसिक स्वास्थ्य संघर्ष के बारे में बात करते हैं। वह इस बारे में खुलते हैं कि कैसे उन्होंने महसूस किया था कि उनकी मां के बारे में नहीं सोचकर उन्हें बेहतर तरीके से ठीक करने में मदद मिलेगी, लेकिन केवल यह महसूस करने के लिए कि दर्द को कैसे दबाया गया था उनके देर से बिसवां दशा में नतीजे             </p>
+             <div class="reflink"><a href="https://www.forbes.com/sites/ceciliarodriguez/2017/04/18/prince-harry-opens-up-about-his-20-years-of-mental-struggle/?sh=143a1a2f78ab" target="_blank">संदर्भ। फोर्ब्स.कॉम
+            </a></div>
+             <a class="takeyourfirststep" class="takeyourfirststep" [routerLink]="['/contact-us/']" fragment="contactusform">
+              आज ही अपना पहला कदम उठाएं!
+            </a>
+           </div>
+         </div>
+       </div>
+       <div class="swiper-slide">
+         <div class="row">
+           <!-- <div class="col-md-6">
+             <img src="assets/img/service/abraham.png" class="img" />
+           </div> -->
+           <div class="col-md-12">
+             <h3>अब्राहम लिंकन </h3>
+             <p>
+              अब्राहम लिंकन ने गहरे दुखों और अक्षम उदासी के साथ संघर्ष किया, लेकिन इसने उन्हें एक राष्ट्रपति के रूप में बड़े संकट से निपटने का साहस दिया। उनके बचपन के दुखों और नुकसानों ने उन सभी में योगदान दिया, जिन्हें तब "उदासीनता" कहा जाता था।             </p>
+             <div class="reflink"><a href="https://www.theatlantic.com/magazine/archive/2005/10/lincolns-great-depression/304247/" target="_blank">संदर्भ। theatlantic.com
+            </a></div>
+             <a class="takeyourfirststep" class="takeyourfirststep" [routerLink]="['/contact-us/']" fragment="contactusform">
+              आज ही अपना पहला कदम उठाएं!            </a>
+           </div>
+         </div>
+       </div>
 
-<section class="service-sec-5 commonsectionmt pt-5 pb-5">
+      </div>
+      
+      <div class="swiper-pagination"></div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </swiper>
+  </div>
+</section> 
+<section class="service-sec-5 commonsectionmt pt-5 pb-5" *ngIf="datamessage == 'English'">
   <div class="container">
     <div class="row">
       <h2 class="title-head" style="color: #fff">Our Advisory Board</h2>
@@ -377,8 +610,140 @@
     </div>
   </div>
 </section>
+<section class="service-sec-5 commonsectionmt pt-5 pb-5" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row">
+      <h2 class="title-head" style="color: #fff">हमारा सलाहकार बोर्ड
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <swiper [config]="config2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="ouradvisoryboardimgcontainer">
+                <img
+                  src="assets/img/service/GargiChakraborty.webp"
+                  class="drimg"
+                  alt="Get your perscription"
+                />
+                <img
+                  src="assets/img/service/Path.png"
+                  class="pathimg"
+                  alt="Get your perscription"
+                />
 
-<section class="service-sec-6 commonsectionmt">
+                <!-- <img src="assets/img/new-home/Ellipse 20.png" alt="Get your perscription" style="height: 168px;margin: 9px 0px 0px -6px;position: relative;z-index: 1010;"/>
+                  <img src="assets/img/new-home/Ellipse 21.png" alt="Get your perscription" style="height: 168px;margin: 9px 0px 0px -6px;"/> -->
+              </div>
+              <div class="ouradvisoryboardcontentcontainer">
+                <h3>सुश्री गार्गी चक्रवर्ती, एमफिल </h3>
+                <h5>नैदानिक ​​मनोविज्ञानी</h5>
+                <p class="connecttextnow">
+                  गार्गी चक्रवर्ती, एक नैदानिक ​​मनोवैज्ञानिक, 7 साल के साथ
+                  अनुभव, अपने ग्राहकों के लिए एक सुरक्षित स्थान बनाने का प्रयास करता है
+                  एक साक्ष्य-आधारित और नैतिक निर्माण के माध्यम से
+                  मनो-चिकित्सीय संबंध। वह में सक्रिय रही है
+                  विभिन्न मीडिया प्लेटफार्मों में मानसिक स्वास्थ्य जागरूकता की आवाज उठाना
+                  और एक उत्साही शोधकर्ता हैं, जो हाल ही में से जुड़े हुए हैं
+                  निमहंस। वह माइंडफुलनेस बेस्ड कॉग्निटिव की विशेषज्ञ हैं
+                  व्यवहारिक हस्तक्षेप, वयस्कों के लिए व्यक्तिगत चिकित्सा,
+                  युगल चिकित्सा, सेक्स चिकित्सा, और किसी भी प्रकार के सौदों
+                  भावनात्मक और व्यवहार संबंधी मुद्दे, काम से संबंधित तनाव,
+                  समायोजन के मुद्दे, क्रोध प्रबंधन और समग्र मानसिक
+                  हाल चाल।
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ouradvisoryboardimgcontainer">
+                <img
+                  src="assets/img/service/VichitraDAnand.webp"
+                  class="drimg"
+                  alt="Get your perscription"
+                />
+                <img
+                  src="assets/img/service/Path.png"
+                  class="pathimg"
+                  alt="Get your perscription"
+                />
+
+                <!-- <img src="assets/img/new-home/Ellipse 20.png" alt="Get your perscription" style="height: 168px;margin: 9px 0px 0px -6px;position: relative;z-index: 1010;"/>
+                  <img src="assets/img/new-home/Ellipse 21.png" alt="Get your perscription" style="height: 168px;margin: 9px 0px 0px -6px;"/> -->
+              </div>
+              <div class="ouradvisoryboardcontentcontainer">
+                <h3>सुश्री विचित्र डी आनंद</h3>
+                <h5>एमए एप्लाइड साइकोलॉजी, प्रशिक्षित रिलेशनशिप थेरेपिस्ट</h5>
+                <p class="connecttextnow">
+                  विचित्र दरगन आनंद एक अनुप्रयुक्त मनोवैज्ञानिक हैं और
+                  वैवाहिक में गहरी रुचि रखने वाले रिलेशनशिप थेरेपिस्ट
+                  परामर्श और पालन-पोषण। वह एनआईई सलाहकार रही हैं
+                  चंडीगढ़ में टाइम्स ऑफ इंडिया और लेखों में योगदान दिया है
+                  प्रकाशन के लिए नियमित हेल्पलाइन कॉलम करने के अलावा
+                  एजुकेशन टाइम्स में छात्रों के लिए। उसने काम किया है
+                  भारतीय वायु सेना में व्यापक रूप से एक स्वतंत्र के रूप में
+                  मनोवैज्ञानिक सलाहकार और आयोजित प्रशिक्षण कार्यक्रमों के लिए
+                  वायु योद्धा और उनके परिवार। वह एक प्रेरक भी है
+                  वक्ता और सखी पत्रिका के नियमित स्तंभकार हैं।
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ouradvisoryboardimgcontainer">
+                <img
+                  src="assets/img/service/PriyankaBhattacharjee.webp"
+                  class="drimg"
+                  alt="Get your perscription"
+                />
+                <img
+                  src="assets/img/service/Path.png"
+                  class="pathimg"
+                  alt="Get your perscription"
+                />
+
+                <!-- <img src="assets/img/new-home/Ellipse 20.png" alt="Get your perscription" style="height: 168px;margin: 9px 0px 0px -6px;position: relative;z-index: 1010;"/>
+                  <img src="assets/img/new-home/Ellipse 21.png" alt="Get your perscription" style="height: 168px;margin: 9px 0px 0px -6px;"/> -->
+              </div>
+              <div class="ouradvisoryboardcontentcontainer">
+                <h3>सुश्री प्रियंका भट्टाचार्जी, एमफिल</h3>
+                <h5>वरिष्ठ नैदानिक ​​मनोवैज्ञानिक</h5>
+                <p class="connecttextnow">
+                  प्रियंका पिछले 7.5 साल से काम कर रही हैं
+                  दो बार के स्वर्ण पदक से सम्मानित उनकी स्नातकोत्तर और एमफिल है;
+                  उसने अपना ग्रेजुएशन और पोस्ट-ग्रेजुएशन से पूरा किया है
+                  गौहाटी विश्वविद्यालय और उन्हें प्रमाण पत्र से सम्मानित किया गया
+                  गौहाटी से पोस्ट ग्रेजुएशन में अकादमिक उत्कृष्टता
+                  विश्वविद्यालय। उन्होंने आगे एम.फिल. पूरा किया है। क्लिनिकल में
+                  भारतीय पुनर्वास परिषद के अंतर्गत मनोविज्ञान। उसके खेत
+                  हितों और विशेषज्ञता में बाल और विकास शामिल हैं
+                  मनोविज्ञान, बाल और किशोर मनोचिकित्सा और परामर्श,
+                  विकलांग बच्चों का निदान और प्रबंधन, वयस्क
+                  मानसिक स्वास्थ्य के मुद्दे-मनो-निदान और मनोचिकित्सा
+                  (सीबीटी और सीबीटी आधारित तौर-तरीकों सहित), व्यवहारिक
+                  आकलन, माता-पिता की सलाह, व्यक्तित्व का आकलन
+                  और योग्यता, और मूड जैसी विविध मानसिक स्थितियां
+                  विकार, तनाव और चिंता संबंधी विकार जैसे ओसीडी, जीएडी,
+                  फोबिया, व्यक्तित्व विकार, मानसिक स्पेक्ट्रम विकार,
+                  मादक द्रव्य और व्यवहार व्यसन, युगल परामर्श
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </swiper>
+      </div>
+      <div class="col-md-12 mt-3 text-center">
+        <button class="btn connectnow" [routerLink]="['/contact-us/']" fragment="contactusform">अब जोड़ो
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-sec-6 commonsectionmt" *ngIf="datamessage == 'English'">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-12">
@@ -478,8 +843,106 @@
     </div>
   </div>
 </section>
-
-<section class="service-sec-7 commonsectionmt commonsectionbt">
+<section class="service-sec-6 commonsectionmt" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h2 class="title-head">
+          प्रशंसापत्र - जैसे लोग हमारे बारे में अपने विचार साझा करते हैं…।        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <swiper [config]="config3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="servicecaersec-6">
+                <div class="row">
+                  <div class="col-2 col-sm-2  col-md-2  col-lg-2 ">
+                    <img
+                      src="assets/img/service/girldami.png"
+                      alt="Get your perscription"
+                    />
+                  </div>
+                  <div class="col-8 col-sm-8  col-md-8  col-lg-8 "><h3 class="testimonialtitle">आयशा</h3></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="cardline"></div>
+                    <p class="testimonialtext">
+                      चैट-ए-डॉक एप्लिकेशन का उपयोग करना बहुत आसान है और मुझे प्राप्त हुआ
+                      मेरे चल रहे मानसिक स्वास्थ्य के लिए एक चौतरफा समर्थन
+                      जिस हालत से मैं पिछले 5 साल से जूझ रहा था।
+                      विशेषज्ञ बहुत मददगार और बहुत ही सुलभ हैं। वे थे
+                      मेरे सभी सवालों के जवाब।
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="servicecaersec-6">
+                <div class="row">
+                  <div class="col-2 col-sm-2  col-md-2  col-lg-2 ">
+                    <img
+                      src="assets/img/service/girldami.png"
+                      alt="Get your perscription"
+                    />
+                  </div>
+                  <div class="col-8 col-sm-8  col-md-8  col-lg-8 "><h3 class="testimonialtitle">प्रवीण</h3></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="cardline"></div>
+                    <p class="testimonialtext">
+                      चैट-ए-डॉक ने मुझे my . के लिए एकदम सही समाधान दिया है
+                      पिछले 4 महीने से बढ़ा तनाव 4 महीने पहले मैं में था
+                      एक बुरा आकार और आज मैं केवल बहुत सारे बदलाव देख सकता हूँ
+                      चिकित्सा के कारण। अगर आपके पास है तो आज ही किसी थेरेपिस्ट से मिलें
+                      तनाव। अपने तनाव को नजरअंदाज न करें।
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="servicecaersec-6">
+                <div class="row">
+                  <div class="col-2 col-sm-2  col-md-2  col-lg-2 ">
+                    <img
+                      src="assets/img/service/girldami.png"
+                      alt="Get your perscription"
+                    />
+                  </div>
+                  <div class="col-8 col-sm-8  col-md-8  col-lg-8 "><h3 class="testimonialtitle">सौरव</h3></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="cardline"></div>
+                    <p class="testimonialtext">
+                      3 साल पहले जब मुझे गंभीर अवसाद का पता चला था
+                      और मुझे दवा के साथ निर्धारित किया गया था, मुझे एक तरह का महसूस हुआ
+                      शर्मिंदगी चैट-ए-डॉक . में रेफर किए जाने के बाद आज
+                      परामर्श सत्र के लिए मेरे पास खुद को देखने का एक नया तरीका है
+                      और मुझे और अधिक आत्मविश्वास महसूस होता है
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-sec-7 commonsectionmt commonsectionbt"  *ngIf="datamessage == 'English'">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-12">
@@ -491,6 +954,34 @@
             class="commonpad"
             [ngClass]="item.t == 'true' ? 'defultshow' : 'hiding'"
             (click)="doctorhide(item)"
+          >
+            <div class="pline">{{ item.title }}</div>
+            <!-- <img src="assets/img/service/" alt="Get your perscription" class="imgarrwo"/> -->
+            <i class="fa fa-angle-left iconCustom" aria-hidden="true"></i>
+            <div class="Ckekbox1" *ngIf="item.t == 'true'">
+              {{ item.description }}
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-12 text-center">
+          <button class="morequestionbtn">More Question</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-sec-7 commonsectionmt commonsectionbt" *ngIf="datamessage == 'हिंदी'">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h2 class="title title3width commontitle">अधिकतर पूछे जाने वाले सवाल</h2>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12 mb-3" *ngFor="let item of quetionList1">
+          <div
+            class="commonpad"
+            [ngClass]="item.t == 'true' ? 'defultshow' : 'hiding'"
+            (click)="doctorhide1(item)"
           >
             <div class="pline">{{ item.title }}</div>
             <!-- <img src="assets/img/service/" alt="Get your perscription" class="imgarrwo"/> -->
