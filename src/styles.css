@@ -441,6 +441,9 @@ color:#fff;
 border: none;
 width: 220px;
 }
+.servicedownloadbtncontanerhindi{
+  width: 230px!important;
+}
 
 .downloadapp{
  
@@ -858,9 +861,11 @@ width: 100%;
   font-size: .8rem;
   margin-top:px;
   margin-bottom: 20px;
-
 }
-.footerdownloadbtn img {
+.footerdownloadbtnhindivesion {
+  width: 172px!important;
+}
+.footerdownloadbtn img{
   padding-left: 10px;
 }
 .footertop{
