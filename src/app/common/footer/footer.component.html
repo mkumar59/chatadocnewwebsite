@@ -6,10 +6,13 @@
             <div class="row">
                 <div class="col-md-2"><img src="assets/img/home/logo.png" alt="logo" alt=""/></div>
                 <div class="col-md-10">
-                  <p>
+                  <p *ngIf="dataLang=='English'">
                     Chat-A-Doc is your safe space of expression. Experience the best intervention from our diverse expertise in Mental Health. Take the first step towards your well being today, we are with you!
                    </p>
-  
+                   <p *ngIf="dataLang=='हिंदी'">
+                    चैट-ए-डॉक आपकी अभिव्यक्ति का सुरक्षित स्थान है। मानसिक स्वास्थ्य में हमारी विविध विशेषज्ञता से सर्वोत्तम हस्तक्षेप का अनुभव करें। आज अपनी भलाई की ओर पहला कदम बढ़ाइए, हम आपके साथ हैं!
+                   </p>
+                   <div class="footerdownloadbtn"><span>Download App</span><a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank"><img  src="assets/img/service/android.png"></a><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/service/ios.png"></a></div>
                     </div>
             </div>
         </div>
@@ -23,12 +26,29 @@
             </div>
             <div class="col-md-4"> 
               <h3>We are just a click away</h3>
-              <ul>
-                    <li><input class="form-control" type="text" /></li>
-                    <li class="mt-3">
-                        <button class="callbackbtn">Request Call Back</button>
+              
+                <form [formGroup]="requestCallsubmit" (submit)="requestCall(requestCallsubmit)">
+                    <ul>
+                    <li>
+                        <input class="form-control" type="text" formControlName="first_name" placeholder="Name*"/>
+                        <div *ngIf="submitted && f.first_name.errors">
+                            <div *ngIf="f.first_name.errors.required" class="requared">First Name is required</div>
+                        </div>
                     </li>
-              </ul>
+                    <li class="mt-2">
+                        <input class="form-control" formControlName="phone"  minlength="10" maxlength="10" type="text" placeholder="Mobile no*"/>
+                        <div *ngIf="submitted && f.phone.errors" class="">  
+                            <div *ngIf="f.phone.errors.required" class="requared">Phone no is required.</div>  
+                            <div *ngIf="f.phone.errors.pattern"  class="requared">Please, Enter 10 digit Mobile Number.</div>  
+                        </div> 
+                    </li>
+                    <li class="mt-3">
+                        <p>{{message}}</p>
+                        <button class="callbackbtn" type="submit">Request Call Back</button>
+                    </li>
+                 </ul>
+                </form>  
+             
         </div>
       
     </div>
@@ -36,20 +56,27 @@
 <div class="footer2">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
-                <img src="assets/img/footer/local_phone-24px.png" alt="phone icon"><span>844-682-1072</span>
+            <div class="col-md-2 fmt-20">
+                <img src="assets/img/footer/local_phone-24px.png" alt="phone icon"><a href="tel:844-682-1072" style="text-decoration:none;color: #222;">844-682-1072</a>
             </div>
-            <div class="col-md-4">
-               <img src="assets/img/footer/local_post_office-24px.png" alt="message" ><span style="padding-left:10px;cursor: pointer;" data-toggle="modal" data-target="#footermodel" >chatadoc-contactus@homecareforyou.com</span>
+            <div class="col-md-4 fmt-20">
+               <img src="assets/img/footer/local_post_office-24px.png" alt="message" ><span style="padding-left:10px;cursor: pointer;">chatadoc-contactus@homecareforyou.com</span>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-3">
+            <div class="col-md-3 offset-md-1 fmt-20 offset-lg-1">
                 <span>Follow Us :-</span>
-                <a href="https://www.facebook.com/chatadoc1"><img class="social" src="assets/img/footer/facebook.png"></a>
-                <!-- <a href=""><img class="social" src="assets/img/new-home/twitter.png"></a>
-                <a href=""><img class="social" src="assets/img/new-home/youtube.png"></a> -->
-                <a href="https://www.instagram.com/chat_a_doc/"><img class="social" src="assets/img/footer/twitter.png" alt="instagram"/></a>
-                <a href="https://www.linkedin.com/company/chatadoc/"><img  class="social"src="assets/img/footer/youtube.png" alt="linkedin"/></a>
+                <a href="https://www.facebook.com/chatadoc1" target="_blank">
+                    <img class="social" src="assets/img/footer/facebook.png">
+                </a>
+                <a href="https://www.instagram.com/chat_a_doc/" target="_blank">
+                    <img class="social" src="assets/img/footer/Instagram.svg">
+                </a>
+                <a href="https://www.linkedin.com/company/chatadoc/" target="_blank">
+                    <img class="social" src="assets/img/footer/Linkedin.svg">
+                </a>
+                <a href="https://mobile.twitter.com/chatadoc1" target="_blank">
+                    <img class="social" src="assets/img/footer/twitter.png" alt="instagram"/>
+                </a>
+               
             </div>
         </div>
     </div>
@@ -58,7 +85,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="text-center">© 2020 Chat-A-Doc</p>
+                <p class="text-center">© 2022 Chat-A-Doc</p>
             </div>
         </div>
    </div>

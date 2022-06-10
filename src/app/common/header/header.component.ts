@@ -17,10 +17,10 @@ export class HeaderComponent implements OnInit {
   menuciondesktopopen=true;
   menuciondesktopclose=false;
   constructor(public langaugeChange:CommonserviceService) { 
-    // this.langaugeChange.lang.subscribe((res: any) => {  
-    //   this.datamessage = res;  
-    //   console.log(this.datamessage)
-    // })
+    this.langaugeChange.lang.subscribe((res: any) => {  
+      this.datamessage = res;  
+      console.log(this.datamessage)
+    })
   }
 
   ngOnInit(): void {
@@ -71,20 +71,18 @@ myFunction() {
 
   dataChangeLanguage(data:any){
     console.log("data",data)
-    this.dataChangeLanguage=data
-    console.log(this.dataChangeLanguage)
-    var ddd=this.langaugeChange.lang.next(this.dataChangeLanguage); 
-    console.log(",,,,,",ddd)
+    this.langaugeChange.lang.next(data); 
+    // console.log(",,,,,",this.langaugeChange.lang.next(data))
 
   }
 
-  dataChangeLanguageHindi(data:any){
-    console.log("data",data)
-    this.dataChangeLanguage=data
-    console.log(this.dataChangeLanguage)
-    var ddd=this.langaugeChange.lang.next(this.dataChangeLanguage); 
-    console.log(",,,,,",ddd)
-  }
+  // dataChangeLanguageHindi(data:any){
+  //   console.log("data",data)
+  //   this.dataChangeLanguage=data
+  //   console.log(this.dataChangeLanguage)
+  //   var ddd=this.langaugeChange.lang.next('a'); 
+  //   console.log(",,,,,",ddd)
+  // }
 
   
 

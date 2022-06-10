@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sevices',
   templateUrl: './sevices.component.html',
@@ -43,7 +44,7 @@ export class SevicesComponent implements OnInit {
       description:'Answer : Yes certainly! There is a mutual connection between mind and body. Stress leads to secretion of cortisol which negatively impacts various bodily functions - respiration, digestion, metabolism etc.'
     }
   ]
-  constructor(public langaugeChange:CommonserviceService) { 
+  constructor(public langaugeChange:CommonserviceService,private route:Router) { 
     this.langaugeChange.lang.subscribe((res: any) => {  
       this.datamessage = res;  
       console.log(this.datamessage)
@@ -51,9 +52,10 @@ export class SevicesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
   config: SwiperOptions = {
+    
     pagination: { 
       el: '.swiper-pagination', 
       clickable: true 
@@ -64,11 +66,25 @@ export class SevicesComponent implements OnInit {
     },
     spaceBetween:10,
     slidesPerView:1,
+    autoplay: 
+    {
+      delay: 3000,
+      pauseOnMouseEnter:true,
+      disableOnInteraction:false
+    },
+    loop:true,
   };
 
   config2: SwiperOptions = {
+
     loop:true,
-    autoplay:true,
+    speed:1000,
+    autoplay: 
+    {
+      delay: 2000,
+      pauseOnMouseEnter:true,
+      disableOnInteraction:false
+    },
     pagination: { 
       el: '.swiper-pagination', 
       clickable: true 
@@ -79,9 +95,19 @@ export class SevicesComponent implements OnInit {
     },
     spaceBetween:10,
     slidesPerView:1,
+   
   };
 
+
   config3: SwiperOptions = {
+    speed:1000,
+    autoplay: 
+    {
+      delay: 2000,
+      pauseOnMouseEnter:true,
+      disableOnInteraction:false
+    },
+    loop: false,
     pagination: { 
       el: '.swiper-pagination', 
       clickable: true 
@@ -94,23 +120,26 @@ export class SevicesComponent implements OnInit {
     slidesPerView:3,
     breakpoints: {
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 40,
   
       },
       768: {
         slidesPerView: 3,
         spaceBetween: 30,
+        loop: false,
      
       },
       640: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
+        loop: false,
       
       },
       320: {
         slidesPerView: 1,
         spaceBetween: 10,
+        loop: false,
     
       }
     }
@@ -133,6 +162,8 @@ export class SevicesComponent implements OnInit {
        
       
       }
-      console.log(this.quetionList)
-    }  
+
+    }
+  
+    
 }

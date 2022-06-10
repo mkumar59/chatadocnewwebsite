@@ -3,19 +3,22 @@
      <div class="row">
         <div class="col-12 col-sm-7 col-md-7 col-lg-7 home-banner">
            <!-- <h2 class="bannerhead2">Welcome</h2> -->
-           <h1 class="title-head">Right Doctor . Right Time<br> Right Cost . Any Place</h1>
-           <!-- <h1 class="title-head"> सही डॉक्टर  सही समय सही फीस  कहीं भी </h1> -->
+           <h1 class="title-head" *ngIf="dataLang=='English'">Right Doctor . Right Time<br> Right Cost . Any Place</h1>
+           <h1 class="title-head" *ngIf="dataLang=='हिंदी'"> सही डॉक्टर  सही समय सही फीस  कहीं भी </h1>
            <p class="banner-text">See a doctor or a healthcare expert online in minutes using your Phone or Tablet</p>
            <!-- <p *ngIf="datamessage=='हिंदी'" class="banner-text">अपने स्मार्टफ़ोन, टेबलेट, या कंप्यूटर का उपयोग करके मिनटों में डॉक्टर से ऑनलाइन मिलिए। <br></p> -->
-           <button class="downloadbtn"><img src="assets/img/home/goolgeplayeng.png"></button>
-           <button class="downloadbtn"><img src="assets/img/home/appstoreeng.png"></button>
+           <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc"><img src="assets/img/home/goolgeplayeng.png"></a></button>
+           <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png"></a></button>
            <!-- <button *ngIf="datamessage=='हिंदी'" data-toggle="modal" data-target="#myModal2" class="btn btn1" style="background-image: url('assets/img/new-patient/common-btn.png');">आज ही हमसे जुड़ें </button> -->
         </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 homemobilebannerimgcont">
-           <img src="assets/img/home/home-banner-formobile.png" class="homemobilebannerimg">
-        </div>
+      
      </div>
   </div>
+</section>
+<section class="mobile-bannersection homemobilebannerimgcont">
+   <div class="col-12 col-sm-12 col-md-12 col-lg-12 homemobilebannerimgcont">
+      <img src="assets/img/home/home-banner-formobile.png" class="homemobilebannerimg">
+   </div>
 </section>
 <!-- section two -->
 <section class="sec-2 section commonsectionmt">
@@ -102,116 +105,20 @@
         <div class="col-md-6">
           <div class="medicaltabcontainer">
            <div class="medicaltab1" *ngFor="let item of medicianList.slice(listUni,listLast)">
-              <input type="radio" id="Physician" [checked]="item.b=='true'" (click)="medicianListFun(item)" name="Physician1" value="Physician">
-              <label for="Physician" class="chelboxlabel"> {{item.label}} </label><br>
-              <div class="Ckekbox" *ngIf="item.b=='true'">
-                 <p>{{item.description}}</p>
-              </div>
+              <!-- <input type="radio" id="Physician" [checked]="item.b=='true'"  name="Physician1" value="Physician"/> -->
+              <img src="{{item.dotimg}}" class="chelboxlabel" (click)="medicianListFun(item)" *ngIf="item.b=='true'"/>
+              <img src="{{item.dotimg}}" class="chelboxlabel" (click)="medicianListFun(item)" *ngIf="item.b=='false'"/>
+              <label for="Physician" class="chelboxlabel" (click)="medicianListFun(item)"> {{item.label}} </label><br>
+              <p class="mediciantexttab"  *ngIf="item.b=='true'">{{item.description}}</p>
            </div>
           </div>
           <div class="mobilemt">
-             <button *ngIf="viewMoreBtn" class="knowmorebtn"  (click)="viewMore()">View More</button>
+             <button   *ngIf="viewMoreBtn" class="knowmorebtn"  (click)="viewMore()">View More</button>
              <button   *ngIf="viewLessBtn" class="knowmorebtn"  (click)="lessMore()">Less More</button>
-            </div>
+          </div>
         </div>
-
-        
         <div class="col-md-6">
-           <swiper [config]="config2" >
-              <div class="swiper-wrapper swiper-wrappe11" >
-                 <div class="swiper-slide sec-bg1">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group1.png"  alt="Fever" /></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg2">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group2.png" alt="Headache"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg3">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group3.png" alt="Headache"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg4">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group4.png" alt="Upper Respiratory Infection"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg5">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group5.png" alt="Vomiting"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg6">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group6.png" alt="Diarrhea"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg7">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group7.png" alt="Constipation"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg8">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group8.png" alt="Gastrointestinal Issues"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <!-- <div class="swiper-slide sec-bg9">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group9.png" alt="Seasonal Allergies"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg10">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group10.png" alt="Urinary Tract Infection"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg11">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/Group11.png" alt="Arthritis"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg12">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/12.png" alt="Cough"/></div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="swiper-slide sec-bg13">
-                    <div class="row">
-                       <div class="">
-                          <div class=""><img src="assets/img/treatment/13.png" alt="Diabetes Management"/></div>
-                       </div>
-                    </div>
-                 </div> -->
-              </div>
-           </swiper>
+         <img src="{{showImgmedician}}" style="width: 100%;" alt=""/>
         </div>
      </div>
   </div>
@@ -296,14 +203,14 @@
         <!-- <h2 class="title title5width commontitle mb-3" *ngIf="datamessage=='हिंदी'">अभी डाऊनलोड करें </h2> -->
         <div class="col-6 col-sm-4 col-md-4 col-lg-4">
            <div class="googleplaydiv">
-              <button class="downloadbtn"><img src="assets/img/home/goolgeplayeng.png"></button>
+              <button class="downloadbtn"><a href="https://play.google.com/store/apps/details?id=com.chatadoc" target="_blank"><img src="assets/img/home/goolgeplayeng.png"></a></button>
            </div>
            <div class="googleappstorediv">          
-              <button class="downloadbtn"><img src="assets/img/home/appstoreeng.png"></button>
+              <button class="downloadbtn"><a href="https://apps.apple.com/us/app/chat-a-doc/id1504060176" target="_blank"><img src="assets/img/home/appstoreeng.png"></a></button>
            </div>
         </div>
         <div class="col-6 col-ms-6  col-md-6  col-lg-6 offset-md-1">
-           <img class="downloadimg" src="assets/img/home/sec-5-downloadimglarge.png" alt="download images">
+           <img class="downloadimg" src="assets/img/home/sec-5-downloadimglarge.webp" alt="download images">
         </div>
      </div>
   </div>

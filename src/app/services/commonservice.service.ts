@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';  
+import { Subject,BehaviorSubject } from 'rxjs';  
 @Injectable({
   providedIn: 'root'
 })
 export class CommonserviceService {
-  lang=new Subject();
+  lang= new BehaviorSubject("English");
   constructor() { 
    console.log(this.lang) 
   }

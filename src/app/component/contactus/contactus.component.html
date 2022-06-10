@@ -1,14 +1,19 @@
+<div class="loaderContainer" *ngIf="loaderShow"><div class="loader"></div></div>
+
 <section class="contactus-sec-1 section">
     <div class="container"> 
     <div class="row">
         <div class="col-12 col-sm-12 col-md-5 col-lg-5 home-banner">
           <h2 class="title-head">One Click And <br>We Are Here!</h2>
         </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 homemobilebannerimgcont">
-            <img src="assets/img/home/home-banner-formobile.png" class="homemobilebannerimg">
-         </div>
+      
       </div>
     </div> 
+</section>
+<section class="homemobilebannerimgcont">
+
+        <img src="assets/img/contactus/home-banner-formobile.webp" class="homemobilebannerimg">
+    
 </section>
 <section class="contactus-sec-2 commonsectionmt">
     <div class="container">
@@ -27,26 +32,51 @@
     </div>
 </section>
 
-<section class="contactus-sec-3 commonsectionmt">
+<section class="contactus-sec-3 commonsectionmt" id="contactusform" #contactusform>
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h3 class="contactustitle">Rethink the way you receive care by <br>joining the millions who already do.</h3>
-                  <div class="mt-4 mb-4">
-                    <input type="text" class="form-control" id="yourname" placeholder="Your name">
+                <form [formGroup]="registerForm" (ngSubmit)="formSubmit(registerForm)">
+                <div class="mt-4 mb-4">
+                    <input type="text" class="form-control" id="yourname" formControlName="first_name" placeholder="First name*">
+                    <div *ngIf="submitted && f.first_name.errors">
+                        <div *ngIf="f.first_name.errors.required" class="requared">First Name is required</div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-4">
+                    <input type="text" class="form-control" id="yourname" formControlName="last_name" placeholder="Last name*">
+                    <div *ngIf="submitted && f.last_name.errors">
+                        <div *ngIf="f.last_name.errors.required" class="requared">Last Name is required</div>
+                    </div>
+                </div>
+                  <div class="mb-4">
+                    <input type="text" class="form-control" id="phone" minlength="10" maxlength="10" formControlName="phone" placeholder="Phone no*">
+                    <div *ngIf="submitted && f.phone.errors" class="">  
+                        <div *ngIf="f.phone.errors.required" class="requared">Phone no is required.</div>  
+                        <div *ngIf="f.phone.errors.pattern" class="requared">Please, Enter 10 digit Mobile Number.</div>  
+                    </div> 
                   </div>
                   <div class="mb-4">
-                    <input type="text" class="form-control" id="yourname" placeholder="Phone no">
+                    <input type="text" class="form-control" id="email" formControlName="email" placeholder="Email">
+                    <div *ngIf="submitted && f.email.errors">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
                   </div>
                   <div class="mb-4">
-                    <input type="text" class="form-control" id="yourname" placeholder="Email">
+                    <textarea class="form-control" id="yourmessage" formControlName="message"  rows="3" placeholder="Message"></textarea>
+                    <!-- <div *ngIf="submitted && f.message.errors" >
+                        <div *ngIf="f.message.errors.required">Message is required</div>
+                    </div> -->
                   </div>
                   <div class="mb-4">
-                    <textarea class="form-control" id="yourmessage" rows="3"></textarea>
+                    {{showMessage}}
                   </div>
                   <div class="mb-4">
-                    <button class="submitbtn">Submit</button>
+                    <button class="submitbtn" type="submit">Submit</button>
                   </div>
+                </form> 
             </div>
         </div>
     </div>
@@ -63,10 +93,10 @@
             <div class="col-md-6 commonmobilemarginbt">
                 <p>Follow us on your favorite social media sites! Share your experience using the hashtag #CHATADOC</p>
                 <div class="socialiconconatien">
-                    <img class="socialiconcommon" src="assets/img/contactus/fb.png" alt="fb">
-                    <img class="socialiconcommon" src="assets/img/contactus/insta.png" alt="insta">
-                    <img class="socialiconcommon" src="assets/img/contactus/in.png" alt="linkin">
-                    <img class="socialiconcommon" src="assets/img/contactus/twitter.png" alt="twiter">
+                 <a href="https://www.facebook.com/chatadoc1" target="_blank">   <img class="socialiconcommon" src="assets/img/contactus/fb.png" alt="fb"></a>
+                 <a href="https://www.instagram.com/chat_a_doc/" target="_blank">  <img class="socialiconcommon" src="assets/img/contactus/insta.png" alt="insta"></a>
+                  <a href="https://www.linkedin.com/company/chatadoc/" target="_blank"> <img class="socialiconcommon" src="assets/img/contactus/in.png" alt="linkin"></a>
+                  <a href="https://mobile.twitter.com/chatadoc1" target="_blank" ><img class="socialiconcommon" src="assets/img/contactus/twitter.png" alt="twiter"></a>
                 </div>
             </div>
             <div class="col-md-6">

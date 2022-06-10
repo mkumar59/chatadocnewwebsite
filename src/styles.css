@@ -27,11 +27,56 @@
     font-family:OpenSans-Regular;
     src: url(./assets/fonts/OpenSans-Regular.ttf);
   }
+  /* loader */
+  .resource-sec-1 ul{
+    margin-left: 20px
+  }
+
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .loaderContainer{
+    position: fixed;
+    z-index: 1093;
+    background: #fff;
+    width: 100%;
+    opacity: .5;
+    top: 50%;
+    left: 50%;
+  }
+  .resourcepagelogo{
+    width: 100%;
+  }
+  .chelboxlabel{
+    cursor: pointer;
+  }
   /* Slider css */
+
   .navbar {padding-bottom: 0px!important;}
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: end!important;
+}
+.requared{
+  color: red;
+}
+.mediciantexttab{
+  padding-left: 25px;
 }
 .mobile-viewsec-5{
   display: none;
@@ -63,12 +108,12 @@ display: none;
 .headerdownloadbtn{
   background: #773DDC 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  padding: 5px 4px 5px 4px;
+  padding: 5px 4px 5px 7px;
   color: #fff;
   border: none;
-  width: 162px;
+  width:auto;
   font-size: .8rem;
-  margin-top: 10px;
+  margin-top:5px;
 
 }
 .headerdownloadbtn img{
@@ -190,6 +235,7 @@ display: none;
       position: absolute;
       right: 15px;
       top: 23px;
+      display: none!important;
     }  
     .logoimg1{
       width: 45%;
@@ -222,11 +268,12 @@ display: none;
   padding-left: 20px;
 }
 .medicaltab1 input[name="Physician1"]{
-  accent-color:#773DDC
+  accent-color:#773DDC;
+  cursor:pointer
 }
       .home-sec-1{
-        background-image: url('assets/img/home/home-banner-small.png'
-        );
+        background-image:url("assets/img/home/home.webp");
+       
         background-repeat: no-repeat;
         height: 526px;
         background-size: cover;
@@ -288,7 +335,7 @@ border-radius: 4px;
     padding: 20px 0px 20px 0px!important ;
 }
 .home-sec-5{
-    background-image: url('assets/img/home/home-sec-5-bg-small.png');
+    background-image: url('assets/img/home/home-sec-5-bg-small.webp');
     background-repeat: no-repeat;
     padding: 70px 70px;
     background-size: cover;
@@ -354,10 +401,10 @@ font-family:OpenSans-Bold;
 font-size: .9rem;
 }
 .service-sec-1{
-    background-image: url('./assets/img/service/service-banner-small.png');
+    background-image: url('./assets/img/service/service-banner-small.webp');
     margin-top:70px!important;
-    height: 456px;
-    background-size:contain;
+    height:516px;
+    background-size:cover;
     background-repeat: no-repeat;
 }
 .service-banner{
@@ -417,6 +464,12 @@ width: 220px;
   padding: 10px 20px 10px 20px;
   font-family:OpenSans-Regular;
   font-size: 1rem;
+  text-decoration: none;
+  position: absolute;
+  z-index: 1020;
+}
+.takeyourfirststep:hover{
+  color: white;
 }
 /* section 4 slider */
 .service-sec-4 .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
@@ -441,25 +494,25 @@ width: 220px;
   padding: 0px 0px 70px 0px;
 }
 .service-sec-4 .swiper-button-next {
-  top:90%!important;
+  top:74%!important;
 }
 .service-sec-4 .swiper-button-prev {
-  top:90%!important;
+  top:74%!important;
 }
 .service-sec-4 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 10px;
+  bottom:100px;
   left: 0;
-  width: 35%!important;
+  width:100%!important;
 }
 .service-sec-4 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  left: 47%;
+  left:41%;
   right: 50%;
   background: #773DDC;
   width: 60px;
 }
 
 .service-sec-4 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-    left: 53%;
+    left: 54%;
     right: 50%;
     background: #773DDC;
     width: 60px;
@@ -611,6 +664,7 @@ opacity: 1;
 }
 .connecttextnow{
   color: #fff;
+  text-align: center;
 }
 /* .downloadapp span{
   padding: 0 15px 0px 0px;
@@ -787,7 +841,21 @@ width: 100%;
 
 
 /* footer css start */
+.footerdownloadbtn{
+  background: #773DDC 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  padding: 5px 4px 5px 7px;
+  color: #fff;
+  border: none;
+  width: 162px;
+  font-size: .8rem;
+  margin-top:px;
+  margin-bottom: 20px;
 
+}
+.footerdownloadbtn img {
+  padding-left: 10px;
+}
 .footertop{
     background: #F1EBFC;
     padding: 60px 0px 0px 0px;
@@ -817,9 +885,9 @@ width: 100%;
     
 }
 .footer3{
-    padding: 10px  0px 0px 0px;
+    padding: 5px  0px 5px 0px;
 }
-.footer3 p{padding-bottom: 0!important;}
+.footer3 p{padding-bottom: 0!important;margin-bottom: 0!important;}
 .callbackbtn{
     background: #773DDC 0% 0% no-repeat padding-box;
     border-radius: 4px;
@@ -833,32 +901,117 @@ width: 100%;
       /* Media query start.............. */
 
       @media (min-width:768px) and (max-width:1024px) { 
+        .service-sec2-card {
+          margin-bottom: 30px;
+      }
+        .home-sec-1 {
+          background-position: right center;
+      }
+      .home-banner {
+        padding-top: 100px;
+    }
+    .howitwork-sec-1 .howitwork-banner {
+      padding-top: 65px;
+     }
+     .howitwork-bg {
+      background-image: url("assets/img/howitwork/stepmobileview.png");
+      background-position: center;
+      height: auto;
+      background-size:60% 100%;
+  }
+  .htw-common {
+    text-align: center;
+    padding: 3rem 0rem 6rem 0rem;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+/*       
         .hide-moible{
-          display:none;
-        }
-        .hide-moible{
-          display:none;
-        }
+          display:none!important;
+        } */
+        .navbar-expand-lg {
+          justify-content: flex-start!important;
+      }
         .tab-menu{
-          display: block;
+          display: block!important;
         }
         .logoimg1{
-          width: 60%;
+          width: 10%;
         }
+        /* Header */
+        .mobilehide{
+          display: none!important;
+        }
+        
+
+.service-sec-1 {
+  background-position: right;
+}
       }
       
       @media (min-width:480px) and (max-width:767px) { 
-        .hide-moible{
-          display:none;
-        }
+        .howitwork-bg {
+          background-image: url("assets/img/howitwork/stepmobileview.png");
+          background-position: center;
+          height: auto;
+          background-size:60% 100%;
+      }
+      .htw-common {
+        text-align: center;
+        padding: 0rem 0rem 6rem 0rem;
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+        /* .hide-moible{
+          display:block;
+        } */
+        .navbar-expand-lg {
+          justify-content: flex-start!important;
+      }
         .tab-menu{
           display:block!important;
         }
         .logoimg1{
           width:11%;
         }
+        /* Header */
+        .mobilehide{
+          display: none!important;
+        }
+        .title-head {
+          font-size: 1.4rem;
+      }
+      .banner-text{
+        font-size: 1.3rem;
+      }
+
+    .service-sec-1 {
+    
+        background-position: right;
+    }
+    .service-sec2-card {
+      margin-bottom: 30px;
+    }
+    .whychatadocimg {
+      margin-top: 30px;
+  }
+  .service-sec-6 .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 2px;
+}
+.takeyourfirststep {bottom:0px}
       }
       @media (min-width:320px) and (max-width:480px) {
+        .footertop h3 {
+          margin-left:0px;
+      }
+      .fmt-20{
+        margin-top: 20px!important;
+      }
+      .footertop ul{
+        padding-left: 0px;
+      }
         .section{
           padding: 0px 20px 0px 20px;
         } 
@@ -869,6 +1022,17 @@ width: 100%;
           margin-bottom: 20px;
       }
         /* slider css */
+        .service-sec-4 .swiper-container-horizontal > .swiper-pagination-bullets {
+          width: 100%!important;
+      }
+      .service-sec-6 .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom:25px;
+        left: 28px;
+    }
+    .mobile-viewsec-5 .swiper-container-horizontal > .swiper-pagination-bullets {
+      bottom:0px;
+      left: 28px;
+  }
         .desktopviewsec-5{
           display: none;
         }
@@ -899,10 +1063,17 @@ width: 100%;
         .mobile-viewsec-5{
           display: inline-block;
         }
-
-        .homemobilebannerimgcont{
-          display:inline-block
+        .home-sec-3{
+          padding-top: 30px;
         }
+        .homemobilebannerimgcont{
+          display:block;
+          padding:0;
+          margin: 0;
+        }
+        .home-sec-3 p {
+          padding: 0px 0px 20px 0px!important;
+      }
         .homemobilebannerimgcont img{
           width: 100%;
           margin-top:50px;
@@ -916,7 +1087,7 @@ width: 100%;
           
         }
         .title-head {
-          font-size: 1.7rem;
+          font-size: 1.4rem;
       }
       .home-banner{
         padding-top:120px;
@@ -956,7 +1127,7 @@ width: 40%;
 }
         /* Header */
         .mobilehide{
-          display: none;
+          display: none!important;
         }
         /* how it work  */
         .howitwork-sec-1 {
@@ -967,10 +1138,10 @@ width: 40%;
         }
         .htw-common {
           width: 100%;
-          padding: 0px 18px 84px 20px;
+          padding: 26px 18px 54px 20px;
         }
         .howitwork-bg{
-          background-image: url("https://chatadoc.com/assets/img/new-home/mobile-img.png");
+          background-image: url("https://chatadoc.com/assets/img/howitwork/stepmobileview.png");
           background-position: center;
           height: auto;
           background-size: 85% 100%;
@@ -987,6 +1158,14 @@ width: 40%;
           justify-content: flex-start!important;
       }
 
-
-
+      .resource-sec-1 ul{
+        margin-left: 0px;
+        padding-left: 0px!important;
+      }
+      .takeyourfirststep{
+        bottom:10px;
+      }
+      .banner-text{
+        font-size: 1.3rem;
+      }
       }  
