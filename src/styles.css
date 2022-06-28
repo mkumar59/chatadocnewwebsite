@@ -28,7 +28,20 @@
     src: url(./assets/fonts/OpenSans-Regular.ttf);
   }
   /* loader */
-
+  .termandcondition-1 h3{
+    font-family:OpenSans-Bold;
+  }
+  .termandcondition-1 ul li{font-family:OpenSans-Regular;}
+  .privacypolicy-1 ul li{font-family:OpenSans-Regular;}
+  .termandcondition-1 h1{
+    font-family:OpenSans-Bold;
+  }
+  .privacypolicy-1 h3{
+    font-family:OpenSans-Bold;
+  }
+  .privacypolicy-1 h1{
+    font-family:OpenSans-ExtraBold;
+  }
   .resource-sec-1 ul{
     margin-left: 20px
   }
