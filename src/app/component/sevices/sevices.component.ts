@@ -22,7 +22,7 @@ export class SevicesComponent implements OnInit {
     {
       id:2,
       t:'false',
-      title:'What are some tips for maintaining a positive mental well being ',
+      title:'What are some tips for maintaining a positive mental well being? ',
       description:'Answer : There are no universal tips applicable for everyone to maintain a positive mental health. But certain lifestyle aspects such as maintaining good sleep - wake cycle, adequate diet, regular physical activities, engaging in meaningful activities, adequate social support. '
     },
     {
@@ -41,7 +41,7 @@ export class SevicesComponent implements OnInit {
       id:5,
       t:'false',
       title:'I am not able to sleep, work is at mess too, is therapy necessary?',
-      description:'Answer : Yes! You can take therapy as and when you feel like- even if you are at slightest of difficulty or emotionally distress. There is no harm in taking therapy even if you just need a space to vent out or share your difficult feelings .'
+      description:'Answer : Yes! You can take therapy as and when you feel like- even if you are at slightest of difficulty or emotionally distress. There is no harm in taking therapy even if you just need a space to vent out or share your difficult feelings.'
     }
   ]
 
