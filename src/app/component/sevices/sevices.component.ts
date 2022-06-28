@@ -17,13 +17,13 @@ export class SevicesComponent implements OnInit {
       t:'true',
       title:'Is there any solution for Depression?',
       img:'',
-      description:' Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvments and maintain symptom free. Please seek professional help immediately. '
+      description:' Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
     },
     {
       id:2,
       t:'false',
       title:'What are some tips for maintaining a positive mental well being ',
-      description:'Answer : There are no universal tips applicable for everyone to maintain a positive mental health. But certain lifestyle aspects such as maintaining good sleep - wake cycle, adeqaute diet, regular physical activities, engaging in meaningful activities, adequate social support. '
+      description:'Answer : There are no universal tips applicable for everyone to maintain a positive mental health. But certain lifestyle aspects such as maintaining good sleep - wake cycle, adequate diet, regular physical activities, engaging in meaningful activities, adequate social support. '
     },
     {
       id:3,
@@ -35,7 +35,7 @@ export class SevicesComponent implements OnInit {
       id:4,
       t:'false',
       title:'Is tele counselling safe ?',
-      description:' Answer : Tele counselling is absolutely safe in terms of encryption and confidentiality. The professional ethical measures are not reduced or compromised while taking sessions on an online plateform.'
+      description:' Answer : Tele counselling is absolutely safe in terms of encryption and confidentiality. The professional ethical measures are not reduced or compromised while taking sessions on an online platform.'
     },
     {
       id:5,
