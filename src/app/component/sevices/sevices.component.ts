@@ -17,31 +17,31 @@ export class SevicesComponent implements OnInit {
       t:'true',
       title:'Is there any solution for Depression?',
       img:'',
-      description:' Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
+      description:' Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvments and maintain symptom free. Please seek professional help immediately. '
     },
     {
       id:2,
       t:'false',
-      title:'What are some tips for maintaining a positive mental well being?',
-      description:'Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
+      title:'What are some tips for maintaining a positive mental well being ',
+      description:'Answer : There are no universal tips applicable for everyone to maintain a positive mental health. But certain lifestyle aspects such as maintaining good sleep - wake cycle, adeqaute diet, regular physical activities, engaging in meaningful activities, adequate social support. '
     },
     {
       id:3,
       t:'false',
-      title:'Is tele counselling safe?',
-      description:'Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately. '
+      title:' Does stress have any impact on health?',
+      description:'Answer : Yes certainly! There is a mutual connection between mind and body. Stress leads to secreation of cortisol which negatively impacts various bodily functions - respiration, digestation, metabolism etc.'
     },
     {
       id:4,
       t:'false',
-      title:'I am not able to sleep, work is at mess too, is therapy necessary?',
-      description:' Answer : Well it will be wrong to use the word solution for Depression. Since Depression is a psychiatric disorder it needs treatment, and with proper treatment people mark remarkable improvements and maintain symptom free. Please seek professional help immediately.'
+      title:'Is tele counselling safe ?',
+      description:' Answer : Tele counselling is absolutely safe in terms of encryption and confidentiality. The professional ethical measures are not reduced or compromised while taking sessions on an online plateform.'
     },
     {
       id:5,
       t:'false',
-      title:'Does stress have any impact on health?',
-      description:'Answer : Yes certainly! There is a mutual connection between mind and body. Stress leads to secretion of cortisol which negatively impacts various bodily functions - respiration, digestion, metabolism etc.'
+      title:'I am not able to sleep, work is at mess too, is therapy necessary?',
+      description:'Answer : Yes! You can take therapy as and when you feel like- even if you are at slightest of difficulty or emotionally distress. There is no harm in taking therapy even if you just need a space to vent out or share your difficult feelings .'
     }
   ]
 

@@ -5,12 +5,16 @@ import { HowitworkComponent } from './component/howitwork/howitwork.component';
 import { SevicesComponent } from './component/sevices/sevices.component';
 import { ResourceComponent } from './component/resource/resource.component';
 import { ContactusComponent } from './component/contactus/contactus.component';
+import{TermAndConditionComponent} from './component/term-and-condition/term-and-condition.component'
+import {PrivacyPolicyComponent} from './component/privacy-policy/privacy-policy.component'
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'service',component:SevicesComponent},
   {path:'contact-us',component:ContactusComponent},
   {path:'how-it-work',component:HowitworkComponent},
-  {path:'resource',component:ResourceComponent}
+  {path:'resource',component:ResourceComponent},
+  {path:'term-and-condition',component:TermAndConditionComponent},
+  {path:'privacy-policy',component:PrivacyPolicyComponent},
 ];
 
 @NgModule({
