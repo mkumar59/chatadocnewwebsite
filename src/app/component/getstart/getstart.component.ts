@@ -9,12 +9,17 @@ export class GetstartComponent implements OnInit {
 
   constructor(private fb:FormBuilder) { }
   formData:any;
+  submitted = false;
   ngOnInit(): void {
+    
     this.formData=this.fb.group({
       first_name:['',Validators.required],
       last_name:['',Validators.required],
-      email:['',Validators.required],
-      phone_no:['',Validators.required],
+      email:['', [Validators.email]],
+      phone_no:[
+        "",
+        [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")],
+      ],
       age:['',Validators.required],
       gender:['',Validators.required],
       city:['',Validators.required],
@@ -24,6 +29,9 @@ export class GetstartComponent implements OnInit {
       looking_for_chatadoc:['',Validators.required],
 
     });
+
+    
+
     var dateUTC = new Date();
     var dateUTC1 = dateUTC.getTime();
     console.log(dateUTC1) 
@@ -36,8 +44,14 @@ export class GetstartComponent implements OnInit {
     console.log(dateIST)
     
   }
+  get f() { return this.formData.controls; }
 
   formSubmit(data:any){
-    console.log("submit",data.value)
+    this.submitted = true;
+    // console.log(form.value);
+    // this.parameter=form.value;
+    // if (this.formData.invalid) {
+    //   return;
   }
 }
+

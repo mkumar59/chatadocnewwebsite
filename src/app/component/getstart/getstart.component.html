@@ -24,6 +24,10 @@
                 <div class="mb-3">
                     <label for="first_name" clss="form-label">First name</label>
                     <input type="text" formControlName="first_name" class="form-control" id="first_name" placeholder="First name" />
+                    <div *ngIf="submitted && f.first_name.errors">
+                        <div *ngIf="f.first_name.errors.required" class="requared">First Name is required</div>
+                    </div>
+                   
                 </div>
             </div>
             <div class="col-md-3">
@@ -36,24 +40,36 @@
                 <div class="mb-3">
                     <label for="Email" clss="form-label">Email</label>
                     <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" />
+                    <div *ngIf="submitted && f.email.errors">
+                        <div *ngIf="f.email.errors.required" class="requared">Email  is required</div>
+                        <div *ngIf="f.email.errors.email" class="requared">Email must be valid</div>
+
+                    </div>
+                    
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="mb-3">
                     <label for="Phone_Number" clss="form-label">Phone Number</label>
-                    <input type="text" formControlName="phone_no"  class="form-control" id="phone_no" placeholder="Phone Number" />
+                    <input type="text" formControlName="phone_no"   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  class="form-control" id="phone_no" placeholder="Phone Number" />
+                    <div *ngIf="submitted && f.phone_no.errors">
+                        <div *ngIf="f.phone_no.errors.required" class="requared">phone No  is Valid</div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="mb-3">
                     <label for="age" clss="form-label">Age</label>
-                    <input type="text" class="form-control" formControlName="age" id="Age" placeholder="Age" />
+                    <input type="text" class="form-control" formControlName="age" id="Age" placeholder="Age"    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                    <div *ngIf="submitted && f.age.errors">
+                        <div *ngIf="f.age.errors.required" class="requared">Age  is required</div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="mb-3">
                     <label for="City" clss="form-label">City</label>
-                    <input type="text" class="form-control" formControlName="city" id="city" placeholder="City" />
+                    <input type="text" class="form-control" pattern="[a-zA-Z ]*" formControlName="city" id="city" placeholder="City"  />
                 </div>
             </div>
             <div class="col-md-4">
@@ -64,9 +80,12 @@
                         <option>Male</option>
                         <option>Female</option>
                    </select>
+                   <div *ngIf="submitted && f.gender.errors">
+                    <div *ngIf="f.gender.errors.required" class="requared">Gender  is required</div>
+                </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="mb-3">
                     <label for="howdidi" clss="form-label">How did you get to know about Chat-A-Doc?</label>
                    <select class="form-select" formControlName="know_chatadoc">
@@ -84,7 +103,7 @@
                    </select>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="mb-3">
                     <label for="lookingfor" clss="form-label">What are you looking for?</label>
                     <select class="form-select" formControlName="looking_for_chatadoc" >
@@ -111,7 +130,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt-3">
-                <button type="submit" value="Submit" class="callbackbtn">Submit</button>
+                <button type="submit" value="Submit" class="callbackbtn" >Submit</button>
             </div>
         </div>
         </form>
