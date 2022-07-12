@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-contactus',
   templateUrl: './contactus.component.html',
@@ -50,7 +51,7 @@ export class ContactusComponent implements OnInit {
         return;
     }
     this.loaderShow=true;
-    this.http.post('https://mychatadoc.com/mobileaccount/sentMailBycontactUs',this.parameter).subscribe((res)=>{
+    this.http.post(environment.baseUrl+'mobileaccount/sentMailBycontactUs',this.parameter).subscribe((res)=>{
     this.data=res;
     this.showMessage=this.data.message;
     console.log(this.showMessage)

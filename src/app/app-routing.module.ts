@@ -7,6 +7,7 @@ import { ResourceComponent } from './component/resource/resource.component';
 import { ContactusComponent } from './component/contactus/contactus.component';
 import{TermAndConditionComponent} from './component/term-and-condition/term-and-condition.component'
 import {PrivacyPolicyComponent} from './component/privacy-policy/privacy-policy.component'
+import { GetstartComponent } from './component/getstart/getstart.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'service',component:SevicesComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'resource',component:ResourceComponent},
   {path:'term-and-condition',component:TermAndConditionComponent},
   {path:'privacy-policy',component:PrivacyPolicyComponent},
+  {path:'get-start',component:GetstartComponent}
 ];
 
 @NgModule({

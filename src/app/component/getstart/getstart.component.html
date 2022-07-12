@@ -1,0 +1,119 @@
+<section class="getstart-sec-1 section">
+    <div class="container"> 
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-5 home-banner">
+          <h2 class="title-head">Let us to Help you with the Best!</h2>
+        </div>
+      </div>
+    </div> 
+</section>
+<section  class="getstart-sec-2 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-12">
+                <p>Get the best match of licensed, accredited, and board-certified providers who can help you with a range of issues including stress, depression, anxiety, sleep issues, relationships, trauma, grief, and more. Our therapists will give you the same professionalism and quality as you expect from an in-clinic therapist, with the ability to communicate as and when you want without worry of buying the whole plan/package.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="getstart-sec-3 mt-5 commonsectionbt">
+    <div class="container">
+        <form class="card py-5 px-5" [formGroup]="formData" (submit)="formSubmit(formData)">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label for="first_name" clss="form-label">First name</label>
+                    <input type="text" formControlName="first_name" class="form-control" id="first_name" placeholder="First name" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label for="last_name" clss="form-label">Last name</label>
+                    <input type="text" formControlName="last_name" class="form-control" id="last_name" placeholder="Last name" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label for="Email" clss="form-label">Email</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <label for="Phone_Number" clss="form-label">Phone Number</label>
+                    <input type="text" formControlName="phone_no"  class="form-control" id="phone_no" placeholder="Phone Number" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="age" clss="form-label">Age</label>
+                    <input type="text" class="form-control" formControlName="age" id="Age" placeholder="Age" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="City" clss="form-label">City</label>
+                    <input type="text" class="form-control" formControlName="city" id="city" placeholder="City" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="howdidi" clss="form-label">Gender</label>
+                   <select class="form-select" formControlName="gender">
+                        <option>Select a option</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                   </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="howdidi" clss="form-label">How did you get to know about Chat-A-Doc?</label>
+                   <select class="form-select" formControlName="know_chatadoc">
+                        <option>Select a option</option>
+                        <option>Google</option>
+                        <option>Instagramr</option>
+                        <option>Facebook</option>
+                        <option>Email</option>
+                        <option>Linkedin</option>
+                        <option>Youtube</option>
+                        <option>Twitter</option>
+                        <option>Referred by Someone</option>
+                        <option>Workshop</option>
+                        <option>Other</option>
+                   </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="lookingfor" clss="form-label">What are you looking for?</label>
+                    <select class="form-select" formControlName="looking_for_chatadoc" >
+                        <option>Select a option</option>
+                        <option>Individual Therapy</option>
+                        <option>Couple Therapy</option>
+                        <option>Teen Therapy</option>
+                        <option>Workshop</option>
+                   </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="anymedicalhistory" clss="form-label">Any Medical History</label>
+                    <textarea class="form-control" formControlName="md_history" placeholder="Any Medical History"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="currentlyfacing" clss="form-label">Currently facing any difficulty?</label>
+                    <textarea class="form-control" formControlName="face_difculty" placeholder="Currently facing any difficulty?"></textarea>  
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt-3">
+                <button type="submit" value="Submit" class="callbackbtn">Submit</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</section>

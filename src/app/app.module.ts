@@ -16,6 +16,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { HttpClientModule } from '@angular/common/http';
 import { PrivacyPolicyComponent } from './component/privacy-policy/privacy-policy.component';
 import { TermAndConditionComponent } from './component/term-and-condition/term-and-condition.component';
+import { GetstartComponent } from './component/getstart/getstart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { TermAndConditionComponent } from './component/term-and-condition/term-a
     HeaderComponent,
     FooterComponent,
     PrivacyPolicyComponent,
-    TermAndConditionComponent
+    TermAndConditionComponent,
+    GetstartComponent
   ],
   imports: [
     BrowserModule,
