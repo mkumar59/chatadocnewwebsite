@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
 import { SwiperOptions } from 'swiper';
+import { Meta,Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -49,11 +50,22 @@ export class HomeComponent implements OnInit {
     {id:15,dotimg:'assets/img/treatment/circlewithnotbg.png',b:'false',imgUrl:'assets/img/treatment/WorkPlaceStress.webp',label:'कार्यस्थल तनाव',description:'क्या आप व्यावसायिक तनाव से जूझ रहे हैं, या कार्य-जीवन संतुलन बनाए रखना मुश्किल है, या पर्याप्त नौकरी चुनने का निर्णय है?'},
     {id:16,dotimg:'assets/img/treatment/circlewithnotbg.png',b:'false',imgUrl:'assets/img/treatment/DifficultyInCoping.webp',label:'मुकाबला करने में कठिनाई',description:'क्या आप किसी कठिन परिस्थिति या व्यक्ति से निपटने के लिए संघर्ष कर रहे हैं या तनावग्रस्त होने पर धूम्रपान, शराब के दुरुपयोग या अनुचित यौन सामग्री का सहारा ले रहे हैं?'}
   ]
-  constructor(private langservice:CommonserviceService) {
+  constructor(private langservice:CommonserviceService,private metaTagService:Meta,private titleService:Title) {
     this.langservice.lang.subscribe((res: any) => {  
       this.dataLang = res;
       console.log(this.dataLang);
+     
     })
+    
+    this.titleService.setTitle('Chat-a-Doc | Online Mental Health Counseling With Right Expert Anytime Anywhere');
+
+    this.metaTagService.addTags([
+      { name: 'keywords', content: 'mental health counseling, depression counseling, mental health therapy, online clinical psychologist, family psychologist, online counseling India, mental health app, counseling app, therapy app, psychiatrist online consultation, online psychiatrist, online psychiatrist counseling.' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'chat-a-doc' },
+      { name: 'description', content:'Book an online counseling or therapy session for stress, relationship, anxiety, depression, sleep issues, career, confidence, bullying, work place stress, difficultly in coping, grief and more. Session with your therapist as and when you need.'}
+    ]);
+
    }
 
 

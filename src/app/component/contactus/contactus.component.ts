@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Meta, Title } from '@angular/platform-browser';
 import { CommonserviceService } from 'src/app/services/commonservice.service';
 import { environment } from 'src/environments/environment';
 @Component({
@@ -16,11 +17,19 @@ export class ContactusComponent implements OnInit {
   showMessage:any;
   data:any;
   dataLang='English';
-  constructor(private formBuilder: FormBuilder,private http:HttpClient,private langaugeChange:CommonserviceService) {
+  constructor(private formBuilder: FormBuilder,private http:HttpClient,private langaugeChange:CommonserviceService,private meta:Meta,private title:Title) {
     
     this.langaugeChange.lang.subscribe((res)=>{
         this.dataLang=res;
-    })
+    });
+    this.title.setTitle('Chat-a-Doc | Contact Us, We Are Just A Click Away');
+    this.meta.updateTag(
+      { name: 'keywords', content: 'mental health app, counseling app, therapy app, online counsellor and therapist, online psychologist, online psychiatrist, online mental health counseling, counseling for anxiety disorder, sleep disorder, family counselors, depression therapist, psychologist therapist, mental health therapist, therapy for anxiety, online psychological counseling.' },
+
+      );
+    this.meta.updateTag(
+      { name: 'description', content:'mental health app, counseling app, therapy app, online counsellor and therapist, online psychologist, online psychiatrist, online mental health counseling, counseling for anxiety disorder, sleep disorder, family counselors, depression therapist, psychologist therapist, mental health therapist, therapy for anxiety, online psychological counseling'}
+    );
 
    }
 

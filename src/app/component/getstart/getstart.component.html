@@ -1,28 +1,38 @@
+<div class="loaderContainer1" *ngIf="loaderShow"><div class="loader1"></div></div>
 <section class="getstart-sec-1 section">
     <div class="container"> 
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-5 col-lg-5 home-banner">
-          <h2 class="title-head">Let us to Help you with the Best!</h2>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 home-banner">
+          <h2 class="title-head" *ngIf="dataLang=='English'">Let Us Know You Better!</h2>
+          <h2 class="title-head" *ngIf="dataLang=='हिंदी'">आइए हम आपको बेहतर तरीके से जानते हैं!</h2>
         </div>
       </div>
     </div> 
+</section>
+<section class="homemobilebannerimgcont">
+
+    <img src="assets/img/contactus/getstart_mobileimg.png" class="homemobilebannerimg">
+
 </section>
 <section  class="getstart-sec-2 mt-5">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-md-12">
-                <p>Get the best match of licensed, accredited, and board-certified providers who can help you with a range of issues including stress, depression, anxiety, sleep issues, relationships, trauma, grief, and more. Our therapists will give you the same professionalism and quality as you expect from an in-clinic therapist, with the ability to communicate as and when you want without worry of buying the whole plan/package.</p>
+                <p *ngIf="dataLang=='English'">Get the best match of licensed, accredited, and board-certified providers who can help you with a range of issues including stress, depression, anxiety, sleep issues, relationships, trauma, grief, and more. Our therapists will give you the same professionalism and quality as you expect from an in-clinic therapist, with the ability to communicate as and when you want without worry of buying the whole plan/package.</p>
+                <p *ngIf="dataLang=='English'">Fill in the following fields to so that we can get you the best match therapist who fits your needs and preferences. Please stay assured that we keep information highly secured and confidential. Your privacy and mental health are important for us.</p>
+                <p *ngIf="dataLang=='हिंदी'">लाइसेंस प्राप्त, मान्यता प्राप्त और बोर्ड-प्रमाणित प्रदाताओं का सबसे अच्छा मिलान प्राप्त करें जो तनाव, अवसाद, चिंता, नींद के मुद्दों, रिश्तों, आघात, दु: ख, और अधिक सहित कई मुद्दों पर आपकी सहायता कर सकते हैं। हमारे थेरेपिस्ट आपको पूरी योजना/पैकेज खरीदने की चिंता किए बिना, जब और जब चाहें संवाद करने की क्षमता के साथ, एक इन-क्लिनिक थेरेपिस्ट से आपकी अपेक्षा के अनुरूप व्यावसायिकता और गुणवत्ता प्रदान करेंगे।</p>
+                <p *ngIf="dataLang=='हिंदी'">निम्नलिखित फ़ील्ड भरें ताकि हम आपको सबसे अच्छा मैच थेरेपिस्ट प्राप्त कर सकें जो आपकी आवश्यकताओं और प्राथमिकताओं के अनुकूल हो। कृपया आश्वस्त रहें कि हम जानकारी को अत्यधिक सुरक्षित और गोपनीय रखते हैं। आपकी गोपनीयता और मानसिक स्वास्थ्य हमारे लिए महत्वपूर्ण हैं।</p>
             </div>
         </div>
     </div>
 </section>
 <section class="getstart-sec-3 mt-5 commonsectionbt">
     <div class="container">
-        <form class="card py-5 px-5" [formGroup]="formData" (submit)="formSubmit(formData)">
+        <form class="card py-5 px-5" [formGroup]="formData" (submit)="formSubmit(formData,mymodal)">
         <div class="row">
             <div class="col-md-3">
-                <div class="mb-3">
-                    <label for="first_name" clss="form-label">First name</label>
+                <div class="mb-4">
+                    <label for="first_name" clss="form-label">First name *</label>
                     <input type="text" formControlName="first_name" class="form-control" id="first_name" placeholder="First name" />
                     <div *ngIf="submitted && f.first_name.errors">
                         <div *ngIf="f.first_name.errors.required" class="requared">First Name is required</div>
@@ -31,67 +41,90 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="last_name" clss="form-label">Last name</label>
                     <input type="text" formControlName="last_name" class="form-control" id="last_name" placeholder="Last name" />
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="mb-3">
-                    <label for="Email" clss="form-label">Email</label>
+                <div class="mb-4">
+                    <label for="Email" clss="form-label">Email *</label>
                     <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" />
                     <div *ngIf="submitted && f.email.errors">
                         <div *ngIf="f.email.errors.required" class="requared">Email  is required</div>
                         <div *ngIf="f.email.errors.email" class="requared">Email must be valid</div>
-
                     </div>
                     
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="mb-3">
-                    <label for="Phone_Number" clss="form-label">Phone Number</label>
-                    <input type="text" formControlName="phone_no"   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  class="form-control" id="phone_no" placeholder="Phone Number" />
+                <div class="mb-4">
+                    <label for="Phone_Number" clss="form-label">Phone Number *</label>
+                    <input type="text" formControlName="phone_no" minlength="10" maxlength="10"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  class="form-control" id="phone_no" placeholder="Phone Number" />
                     <div *ngIf="submitted && f.phone_no.errors">
-                        <div *ngIf="f.phone_no.errors.required" class="requared">phone No  is Valid</div>
+                        <div *ngIf="f.phone_no.errors.required" class="requared">Phone number is required</div>
+                        <div *ngIf="f.phone_no.errors.pattern" class="requared">Phone number must be 10 digit</div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="age" clss="form-label">Age</label>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="age" clss="form-label">Age *</label>
                     <input type="text" class="form-control" formControlName="age" id="Age" placeholder="Age"    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
                     <div *ngIf="submitted && f.age.errors">
                         <div *ngIf="f.age.errors.required" class="requared">Age  is required</div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="City" clss="form-label">City</label>
-                    <input type="text" class="form-control" pattern="[a-zA-Z ]*" formControlName="city" id="city" placeholder="City"  />
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="City" clss="form-label">City *</label>
+                    <input type="text" class="form-control"  formControlName="city" id="city" placeholder="City"  />
+                    <div *ngIf="submitted && f.city.errors">
+                        <div *ngIf="f.city.errors.required" class="requared">City  is required</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="howdidi" clss="form-label">Gender</label>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="howdidi" clss="form-label">Gender *</label>
                    <select class="form-select" formControlName="gender">
-                        <option>Select a option</option>
+                        <option disabled [selected]="true" value=" ">Select an option</option>
                         <option>Male</option>
                         <option>Female</option>
+                        <option> Prefer Not To Say</option>
+                        <option>Other</option>
                    </select>
                    <div *ngIf="submitted && f.gender.errors">
                     <div *ngIf="f.gender.errors.required" class="requared">Gender  is required</div>
                 </div>
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="howdidi" clss="form-label">Occupation *</label>
+                   <select class="form-select" formControlName="occupation">
+                        <option disabled [selected]="true" value="">Select an option</option>
+                        <option>Student</option>
+                        <option>Working Professional</option>
+                        <option>Self Employed</option>
+                        <option>Homemaker</option>
+                        <option>Unemployed</option>
+                        <option>Retired</option>
+                        <option>Others</option>
+                   </select>
+                   <div *ngIf="submitted && f.occupation.errors">
+                   <div *ngIf="f.occupation.errors.required" class="requared">Occupation  is required</div>
+                </div>
+                </div>
+            </div>
             <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="howdidi" clss="form-label">How did you get to know about Chat-A-Doc?</label>
+                <div class="mb-4">
+                    <label for="howdidi" clss="form-label">How did you get to know about Chat-A-Doc? *</label>
                    <select class="form-select" formControlName="know_chatadoc">
-                        <option>Select a option</option>
+                        <option disabled [selected]="true" value=" ">Select an option</option>
                         <option>Google</option>
-                        <option>Instagramr</option>
+                        <option>Instagram</option>
                         <option>Facebook</option>
                         <option>Email</option>
                         <option>Linkedin</option>
@@ -101,38 +134,70 @@
                         <option>Workshop</option>
                         <option>Other</option>
                    </select>
+                   <div *ngIf="submitted && f.occupation.errors">
+                    <div *ngIf="f.know_chatadoc.errors.required" class="requared">Occupation  is required</div>
+                 </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="lookingfor" clss="form-label">What are you looking for?</label>
+                <div class="mb-4">
+                    <label for="lookingfor" clss="form-label">What are you looking for? *</label>
                     <select class="form-select" formControlName="looking_for_chatadoc" >
-                        <option>Select a option</option>
+                        <option disabled [selected]="true" value=" ">Select an option</option>
                         <option>Individual Therapy</option>
                         <option>Couple Therapy</option>
                         <option>Teen Therapy</option>
                         <option>Workshop</option>
+                        <option>Internship</option>
                    </select>
+                   <div *ngIf="submitted && f.looking_for_chatadoc.errors">
+                    <div *ngIf="f.looking_for_chatadoc.errors.required" class="requared">This Field   is required</div>
+                 </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="anymedicalhistory" clss="form-label">Any Medical History</label>
+                <div class="mb-4">
+                    <label for="anymedicalhistory" clss="form-label">Any Medical History *</label>
                     <textarea class="form-control" formControlName="md_history" placeholder="Any Medical History"></textarea>
+                    <div *ngIf="submitted && f.md_history.errors">
+                        <div *ngIf="f.md_history.errors.required" class="requared">This Field   is required</div>
+                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="currentlyfacing" clss="form-label">Currently facing any difficulty?</label>
-                    <textarea class="form-control" formControlName="face_difculty" placeholder="Currently facing any difficulty?"></textarea>  
+                <div class="mb-4">
+                    <label for="currentlyfacing" clss="form-label">Currently facing any difficulty? *</label>
+                    <textarea class="form-control" formControlName="face_difficulty" placeholder="Currently facing any difficulty?"></textarea>  
+                    <div *ngIf="submitted && f.face_difficulty.errors">
+                        <div *ngIf="f.face_difficulty.errors.required" class="requared">This Field  is required</div>
+                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt-3">
-                <button type="submit" value="Submit" class="callbackbtn" >Submit</button>
+                <!-- <p style="font-family:OpenSans-Bold;">{{messageShow}}</p> -->
+                <button type="submit" value="Submit" class="callbackbtn" [disabled]="">Submit</button>
             </div>
         </div>
         </form>
     </div>
+
 </section>
+<ng-template #mymodal let-modal style="background: #773DDC;">
+    
+    <div class="modal-header">
+      <h2 class="modal-title1" id="modal-basic-title">Thank You</h2>
+      <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button> -->
+    </div>
+    <div class="modal-body">
+        <p>We have received your details.</p>
+        <p> Our health expert will get in touch with you within 48 hrs.
+        </p>
+    </div>
+    <div class="btncontainer">
+      <button type="button" class="okaybtn" (click)="modal.close('Save click')">Okay</button>
+    </div>
+  </ng-template>

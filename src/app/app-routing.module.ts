@@ -16,13 +16,13 @@ const routes: Routes = [
   {path:'resource',component:ResourceComponent},
   {path:'term-and-condition',component:TermAndConditionComponent},
   {path:'privacy-policy',component:PrivacyPolicyComponent},
-  {path:'get-start',component:GetstartComponent}
+  {path:'get-started',component:GetstartComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:false,scrollPositionRestoration: 'enabled',  scrollOffset: [0, 0],
-  // Enable scrolling to anchors
-  anchorScrolling: "enabled",})],
+  imports: [RouterModule.forRoot(routes, { useHash: false, scrollPositionRestoration: 'enabled', scrollOffset: [0, 0],
+    // Enable scrolling to anchors
+    anchorScrolling: "enabled", initialNavigation: 'enabledBlocking' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

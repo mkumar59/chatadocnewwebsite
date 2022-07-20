@@ -1,8 +1,8 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrivacyPolicyComponent } from './component/privacy-policy/privacy-policy.component';
 import { TermAndConditionComponent } from './component/term-and-condition/term-and-condition.component';
 import { GetstartComponent } from './component/getstart/getstart.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,12 +33,14 @@ import { GetstartComponent } from './component/getstart/getstart.component';
     GetstartComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
