@@ -26,7 +26,7 @@
         </div>
     </div>
 </section>
-<section class="getstart-sec-3 mt-5 commonsectionbt">
+<section *ngIf="dataLang=='English'" class="getstart-sec-3 mt-5 commonsectionbt">
     <div class="container">
         <form class="card py-5 px-5" [formGroup]="formData" (submit)="formSubmit(formData,mymodal)">
         <div class="row">
@@ -184,20 +184,196 @@
     </div>
 
 </section>
+<section *ngIf="dataLang=='हिंदी'" class="getstart-sec-3 mt-5 commonsectionbt">
+    <div class="container">
+        <form class="card py-5 px-5" [formGroup]="formData" (submit)="formSubmit(formData,mymodal)">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="first_name" clss="form-label">प्रथम नाम *</label>
+                    <input type="text" formControlName="first_name" class="form-control" id="first_name" placeholder="प्रथम नाम" />
+                    <div *ngIf="submitted && f.first_name.errors">
+                        <div *ngIf="f.first_name.errors.required" class="requared">पहला नाम आवश्यक है </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="last_name" clss="form-label">उपनाम</label>
+                    <input type="text" formControlName="last_name" class="form-control" id="last_name" placeholder="उपनाम" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="Email" clss="form-label">ईमेल *</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" placeholder="ईमेल" />
+                    <div *ngIf="submitted && f.email.errors">
+                        <div *ngIf="f.email.errors.required" class="requared">ईमेल की जरूरत है</div>
+                        <div *ngIf="f.email.errors.email" class="requared">ईमेल मान्य होना चाहिए</div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="Phone_Number" clss="form-label">फ़ोन नंबर *</label>
+                    <input type="text" formControlName="phone_no" minlength="10" maxlength="10"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  class="form-control" id="phone_no" placeholder="फ़ोन नंबर" />
+                    <div *ngIf="submitted && f.phone_no.errors">
+                        <div *ngIf="f.phone_no.errors.required" class="requared">फ़ोन नंबर आवश्यक है</div>
+                        <div *ngIf="f.phone_no.errors.pattern" class="requared">फ़ोन नंबर 10 अंकों का होना चाहिए</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="age" clss="form-label">आयु*</label>
+                    <input type="text" class="form-control" formControlName="age" id="Age" placeholder="आयु"    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                    <div *ngIf="submitted && f.age.errors">
+                        <div *ngIf="f.age.errors.required" class="requared">उम्र ज़रूरी है </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="City" clss="form-label">शहर *</label>
+                    <input type="text" class="form-control"  formControlName="city" id="city" placeholder="शहर"  />
+                    <div *ngIf="submitted && f.city.errors">
+                        <div *ngIf="f.city.errors.required" class="requared">शहर की आवश्यकता है
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="howdidi" clss="form-label">लिंग *</label>
+                   <select class="form-select" formControlName="gender">
+                        <option disabled [selected]="true" value=" ">कोई विकल्प चुनें</option>
+                        <option>पुरुष</option>
+                        <option>महिला</option>
+                        <option> चुप रहना पसंद करूंगा</option>
+                        <option>अन्य</option>
+                   </select>
+                   <div *ngIf="submitted && f.gender.errors">
+                    <div *ngIf="f.gender.errors.required" class="requared">लिंग आवश्यक है</div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <label for="howdidi" clss="form-label">व्यवसाय *</label>
+                   <select class="form-select" formControlName="occupation">
+                        <option disabled [selected]="true" value="">कोई विकल्प चुनें</option>
+                        <option>विद्यार्थी</option>
+                        <option>कामकाजी पेशेवर</option>
+                        <option>स्वनियोजित</option>
+                        <option>घरवाली</option>
+                        <option>बेरोज़गार</option>
+                        <option>सेवानिवृत्त</option>
+                        <option>अन्य</option>
+                   </select>
+                   <div *ngIf="submitted && f.occupation.errors">
+                   <div *ngIf="f.occupation.errors.required" class="requared">व्यवसाय की आवश्यकता है
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="howdidi" clss="form-label">आपको चैट-ए-डॉक के बारे में कैसे पता चला? *</label>
+                   <select class="form-select" formControlName="know_chatadoc">
+                        <option disabled [selected]="true" value=" ">कोई विकल्प चुनें </option>
+                        <option>गूगल</option>
+                        <option>Instagram</option>
+                        <option>फेसबुक</option>
+                        <option>ईमेल</option>
+                        <option>Linkedin</option>
+                        <option>यूट्यूब</option>
+                        <option>ट्विटर</option>
+                        <option>किसी के द्वारा संदर्भित</option>
+                        <option>कार्यशाला</option>
+                        <option>अन्य</option>
+                   </select>
+                   <div *ngIf="submitted && f.occupation.errors">
+                    <div *ngIf="f.know_chatadoc.errors.required" class="requared">व्यवसाय की आवश्यकता है
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="lookingfor" clss="form-label">आप क्या ढूंढ रहे हैं? *</label>
+                    <select class="form-select" formControlName="looking_for_chatadoc" >
+                        <option disabled [selected]="true" value=" ">कोई विकल्प चुनें</option>
+                        <option>व्यक्तिगत चिकित्सा </option>
+                        <option>युगल चिकित्सा </option>
+                        <option>टीन थेरेपी</option>
+                        <option>कार्यशाला</option>
+                        <option>इंटर्नशिप</option>
+                   </select>
+                   <div *ngIf="submitted && f.looking_for_chatadoc.errors">
+                    <div *ngIf="f.looking_for_chatadoc.errors.required" class="requared">यह फ़ील्ड आवश्यक है
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="anymedicalhistory" clss="form-label">कोई भी चिकित्सा इतिहास *</label>
+                    <textarea class="form-control" formControlName="md_history" placeholder="कोई भी चिकित्सा इतिहास "></textarea>
+                    <div *ngIf="submitted && f.md_history.errors">
+                        <div *ngIf="f.md_history.errors.required" class="requared">यह फ़ील्ड आवश्यक है
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <label for="currentlyfacing" clss="form-label">वर्तमान में किसी कठिनाई का सामना करना पड़ रहा है? *</label>
+                    <textarea class="form-control" formControlName="face_difficulty" placeholder="वर्तमान में किसी कठिनाई का सामना करना पड़ रहा है?"></textarea>  
+                    <div *ngIf="submitted && f.face_difficulty.errors">
+                        <div *ngIf="f.face_difficulty.errors.required" class="requared">यह फ़ील्ड आवश्यक है
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt-3">
+                <!-- <p style="font-family:OpenSans-Bold;">{{messageShow}}</p> -->
+                <button type="submit"value="Submit" class="callbackbtn">प्रस्तुत करना</button>
+              
+
+            </div>
+            
+        </div>
+        </form>
+    </div>
+
+</section>
 <ng-template #mymodal let-modal style="background: #773DDC;">
     
     <div class="modal-header">
-      <h2 class="modal-title1" id="modal-basic-title">Thank You</h2>
+      <h2   *ngIf="dataLang=='English'"class="modal-title1" id="modal-basic-title">Thank You</h2>
+      <h2  *ngIf="dataLang=='हिंदी'"class="modal-title1" id="modal-basic-title">धन्यवाद</h2>
+
       <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
         <span aria-hidden="true">×</span>
       </button> -->
     </div>
     <div class="modal-body">
-        <p>We have received your details.</p>
-        <p> Our health expert will get in touch with you within 48 hrs.
+        <p  *ngIf="dataLang=='English'" >We have received your details.</p>
+        <p  *ngIf="dataLang=='हिंदी'">हमें आपका विवरण मिल गया है।
+        </p>
+
+        <p  *ngIf="dataLang=='English'" > Our health expert will get in touch with you within 48 hrs.
+        </p>
+        <p  *ngIf="dataLang=='हिंदी'" > हमारे स्वास्थ्य विशेषज्ञ 48 घंटे के भीतर आपसे संपर्क करेंगे।
         </p>
     </div>
     <div class="btncontainer">
-      <button type="button" class="okaybtn" (click)="modal.close('Save click')">Okay</button>
+      <button  *ngIf="dataLang=='English'"type="button" class="okaybtn" (click)="modal.close('Save click')">Okay</button>
+      <button  *ngIf="dataLang=='हिंदी'"type="button" class="okaybtn" (click)="modal.close('Save click')">ठीक</button>
+
     </div>
   </ng-template>
