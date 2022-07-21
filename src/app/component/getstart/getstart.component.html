@@ -239,7 +239,7 @@
                     <label for="City" clss="form-label">शहर *</label>
                     <input type="text" class="form-control"  formControlName="city" id="city" placeholder="शहर"  />
                     <div *ngIf="submitted && f.city.errors">
-                        <div *ngIf="f.city.errors.required" class="requared">शहर की आवश्यकता है
+                        <div *ngIf="f.city.errors.required" class="requared">शहर की आवश्यक है
                         </div>
                     </div>
                 </div>
@@ -267,13 +267,13 @@
                         <option>विद्यार्थी</option>
                         <option>कामकाजी पेशेवर</option>
                         <option>स्वनियोजित</option>
-                        <option>घरवाली</option>
+                        <option>गृहिणी</option>
                         <option>बेरोज़गार</option>
                         <option>सेवानिवृत्त</option>
                         <option>अन्य</option>
                    </select>
                    <div *ngIf="submitted && f.occupation.errors">
-                   <div *ngIf="f.occupation.errors.required" class="requared">व्यवसाय की आवश्यकता है
+                   <div *ngIf="f.occupation.errors.required" class="requared">व्यवसाय की आवश्यक है
                 </div>
                 </div>
                 </div>
@@ -284,10 +284,10 @@
                    <select class="form-select" formControlName="know_chatadoc">
                         <option disabled [selected]="true" value=" ">कोई विकल्प चुनें </option>
                         <option>गूगल</option>
-                        <option>Instagram</option>
+                        <option>इंस्ट्राग्राम</option>
                         <option>फेसबुक</option>
                         <option>ईमेल</option>
-                        <option>Linkedin</option>
+                        <option>लिंक्डइन</option>
                         <option>यूट्यूब</option>
                         <option>ट्विटर</option>
                         <option>किसी के द्वारा संदर्भित</option>
@@ -295,7 +295,7 @@
                         <option>अन्य</option>
                    </select>
                    <div *ngIf="submitted && f.occupation.errors">
-                    <div *ngIf="f.know_chatadoc.errors.required" class="requared">व्यवसाय की आवश्यकता है
+                    <div *ngIf="f.know_chatadoc.errors.required" class="requared">व्यवसाय की आवश्यक है
                     </div>
                  </div>
                 </div>

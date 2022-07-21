@@ -127,14 +127,15 @@
                     <li>
                         <input class="form-control" type="text" formControlName="first_name" placeholder="नाम*"/>
                         <div *ngIf="submitted && f.first_name.errors">
-                            <div *ngIf="f.first_name.errors.required" class="requared">First Name is required</div>
+                            <div *ngIf="f.first_name.errors.required" class="requared">पहला नाम आवश्यक है</div>
                         </div>
                     </li>
                     <li class="mt-2">
                         <input class="form-control" formControlName="phone"  minlength="10" maxlength="10" type="text" placeholder="मोबाइल न*"/>
                         <div *ngIf="submitted && f.phone.errors" class="">  
-                            <div *ngIf="f.phone.errors.required" class="requared">Phone no is required.</div>  
-                            <div *ngIf="f.phone.errors.pattern"  class="requared">Please, Enter 10 digit Mobile Number.</div>  
+                            <div *ngIf="f.phone.errors.required" class="requared">फ़ोन नंबर आवश्यक है</div>  
+                            <div *ngIf="f.phone.errors.pattern"  class="requared">
+                                कृपया, 10 अंकों का मोबाइल नंबर दर्ज करें.</div>  
                         </div> 
                     </li>
                     <li class="mt-3">
